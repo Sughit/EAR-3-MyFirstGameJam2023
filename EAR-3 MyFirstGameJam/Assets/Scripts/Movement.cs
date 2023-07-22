@@ -6,13 +6,19 @@ public class Movement : MonoBehaviour
 {
     float horizontal;
     float vertical;
-     public float speed = 200f;
+     public float speed = 500f;
+     float speed2;
+     float sprint;
+     Vector2 lookDirection;
+    float lookAngle;
 
      Rigidbody2D rb;
 
      void Start()
      {
         rb = GetComponent<Rigidbody2D>();
+        speed2=speed;
+        sprint=speed*2;
      }
 
 
@@ -20,6 +26,18 @@ public class Movement : MonoBehaviour
     {
         horizontal = Input.GetAxisRaw("Horizontal");
         vertical = Input.GetAxisRaw("Vertical");
+
+        lookDirection = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        lookDirection = new Vector2(lookDirection.x - transform.position.x, lookDirection.y - transform.position.y);
+        lookAngle = Mathf.Atan2(lookDirection.y, lookDirection.x) * Mathf.Rad2Deg;
+
+        transform.rotation = Quaternion.Euler(0, 0, lookAngle);
+        
+        if(Input.GetKey(KeyCode.LeftShift))
+                speed=sprint;
+
+            else
+            speed=speed2;
         
     }
     void FixedUpdate()
@@ -28,3 +46,4 @@ public class Movement : MonoBehaviour
             rb.velocity = moveDirection * speed *Time.fixedDeltaTime;
     }
 }
+

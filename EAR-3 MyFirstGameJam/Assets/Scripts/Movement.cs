@@ -6,7 +6,7 @@ public class Movement : MonoBehaviour
 {
     float horizontal;
     float vertical;
-     public float speed = 5f;
+     public float speed = 200f;
 
      Rigidbody2D rb;
 

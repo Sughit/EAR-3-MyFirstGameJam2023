@@ -35,8 +35,8 @@ public class CorridorFirstDungeonGenerator : SimpleRandomWalkDungeonGenerator
         {
             //alege una dintre marimile de coridoare 
 
-            //corridors[i] = IncreaseCorridorBrush3by3(corridors[i]);
-            corridors[i] = IncreaseCorridorSizeByOne(corridors[i]);
+            corridors[i] = IncreaseCorridorBrush3by3(corridors[i]);
+            //corridors[i] = IncreaseCorridorSizeByOne(corridors[i]);
             floorPositions.UnionWith(corridors[i]);
         }
 

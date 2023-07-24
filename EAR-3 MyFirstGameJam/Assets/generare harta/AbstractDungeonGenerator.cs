@@ -9,6 +9,11 @@ public abstract class AbstractDungeonGenerator : MonoBehaviour
     [SerializeField]
     protected Vector2Int startPosition = Vector2Int.zero;
 
+    private void Awake()
+    {
+        tilemapVisualizer = GameObject.Find("TilemapVisualizer").GetComponent<TilemapVisualizer>();
+    }
+
     public void GenerateDungeon()
     {
         tilemapVisualizer.Clear();

@@ -20,6 +20,20 @@ public class cardManager : MonoBehaviour
 
     public void CycleCards()
     {
+        //dezactiveaza toate cartile de pe ecran
+        foreach (var cardI in cardsI)
+        {
+            cardI.gameObject.SetActive(false);
+        }
+        foreach (var cardII in cardsII)
+        {
+            cardII.gameObject.SetActive(false);
+        }
+        foreach (var cardIII in cardsIII)
+        {
+            cardIII.gameObject.SetActive(false);
+        }
+
         //alege 3 carti aleatorii in functie de lista
         cardsI[Random.Range(0, cardsI.Length)].gameObject.SetActive(true);
         cardsII[Random.Range(0, cardsII.Length)].gameObject.SetActive(true);

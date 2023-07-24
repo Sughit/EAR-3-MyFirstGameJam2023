@@ -6,12 +6,6 @@ public class bulletScript : MonoBehaviour
 {
      AudioSource poc;
 
-   /* void Awake()
-    {
-        poc = GetComponent<AudioSource>();
-        poc.Play(0);
-
-    }*/
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -21,4 +15,6 @@ public class bulletScript : MonoBehaviour
     {
         Object.Destroy(gameObject, 5.0f);
     }
+
+    
 }

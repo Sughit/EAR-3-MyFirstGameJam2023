@@ -13,6 +13,8 @@ public class scriptWeapon : MonoBehaviour
     public float ammo=30;
     public Text textAmmo;
     public GameObject incarcator;
+    public GameObject sunet;
+    AudioSource rePoc;
     
     void Start()
     {
@@ -52,7 +54,11 @@ public class scriptWeapon : MonoBehaviour
     {
         ammo=0;
         if(ammo<30)
-        {incarcator.GetComponent<Animator>().Play("reload");}
+        {
+            incarcator.GetComponent<Animator>().Play("reload");
+        }
+        rePoc = GetComponent<AudioSource>();
+        rePoc.Play(0);
         yield return new WaitForSeconds(2);
         ammo=30;
         
@@ -67,7 +73,8 @@ public class scriptWeapon : MonoBehaviour
     {
         GameObject bullet = Instantiate(glontPrefab, punctTragere.position, punctTragere.rotation);
         bullet.GetComponent<Rigidbody2D>().AddForce(punctTragere.up * forta, ForceMode2D.Impulse);
-        canFire=false;
+        canFire=false; 
+        Instantiate(sunet);
         ammo--;
         StartCoroutine(FireRateHandler());
         yield return null;

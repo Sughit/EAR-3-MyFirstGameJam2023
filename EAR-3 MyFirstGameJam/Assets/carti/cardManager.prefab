@@ -44,18 +44,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bfa04b2a82119c04c993acb05166942a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cardsI:
-  - {fileID: 778199320224781446, guid: 86ccf39cd13732d4ead03227b1ba5ad8, type: 3}
-  - {fileID: 3127524894378649026, guid: 73747be68ce38d543af4cfb07adf09ce, type: 3}
-  - {fileID: 6857635920375187667, guid: 4ab2127228173e041826b0321d74db15, type: 3}
-  - {fileID: 7864144040046836904, guid: a376579456c8b4a4382eac12a18b7f32, type: 3}
-  cardsII:
-  - {fileID: 368883596018844890, guid: e75e68df028c40b418d4bd8550d3c5b0, type: 3}
-  - {fileID: 4184091099578313044, guid: d2058675f76df3c4396dbc172fdb4f88, type: 3}
-  - {fileID: 6287570980795132557, guid: 387a68de47a4013408f251ab9321628d, type: 3}
-  - {fileID: 8250030047038207230, guid: 74a53df1cb1e5524eb2379273cf22c51, type: 3}
-  cardsIII:
-  - {fileID: 7914450534683629775, guid: e66658dfd54862f45b1b1f89e7145b67, type: 3}
-  - {fileID: 5728320287031027192, guid: 1a46d37da02968b43b0ca473038c1934, type: 3}
-  - {fileID: 7284672103426728613, guid: 7b008e9f85df2cc4e8bcfe13806ef9f8, type: 3}
-  - {fileID: 6901971149592513563, guid: 413ac16391eef9f41aead0b7506950ba, type: 3}
+  cardsI: []
+  cardsII: []
+  cardsIII: []

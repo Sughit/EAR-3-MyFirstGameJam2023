@@ -9,16 +9,9 @@ public class EnemyScript : MonoBehaviour
     public float health=100f; 
     public float maxHealth=100f;
 
-    float speed;
-    float range;
-    float maxDistance;
-    Vector2 wayPoint;
+    
 
-    void NewDestination()
-    {
-        wayPoint = new Vector2(Random.Range(-maxDistance, maxDistance), Random.Range(-maxDistance,maxDistance));
-    }
-
+    
 
     void Awake()
     {
@@ -28,7 +21,6 @@ public class EnemyScript : MonoBehaviour
     {
         health=maxHealth;
         healthBar.UpdateHealthBar(health, maxHealth);
-        NewDestination();
     }
 
     
@@ -45,11 +37,7 @@ public class EnemyScript : MonoBehaviour
 
     public void Update()
     {
-        transform.position = Vector2.MoveTowards(transform.position, wayPoint, speed * Time.deltaTime);
-        if (Vector2.Distance(transform.position, wayPoint)<range)
-        {
-            NewDestination();
-        }
+
     }
         void OnTriggerEnter2D(Collider2D collision)
     {

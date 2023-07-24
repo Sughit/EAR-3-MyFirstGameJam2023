@@ -69,4 +69,9 @@ public class EnemyScript : MonoBehaviour
             Destroy(collision.gameObject);
          }
     }
+
+    IEnumerator CuloareDamage()
+    {
+        yield return new WaitForSeconds(1F);
+    }
 }

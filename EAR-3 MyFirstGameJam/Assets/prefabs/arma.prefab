@@ -104,7 +104,7 @@ MonoBehaviour:
   forta: 60
   fireRate: 10
   ammo: 30
-  textAmmo: {fileID: 0}
+  textAmmo: {fileID: 181314518799087518, guid: 4bbd671971faa584ca6ab86380b80705, type: 3}
   incarcator: {fileID: 0}
 --- !u!95 &230580564
 Animator:

@@ -14,6 +14,11 @@ public class scriptWeapon : MonoBehaviour
     public Text textAmmo;
     public GameObject incarcator;
     
+    void Start()
+    {
+        textAmmo = GameObject.Find("Canvas/ammoPanel/TextAmmo").GetComponent<Text>();
+    }
+
     void Update()
     {
         if(ammo>0)

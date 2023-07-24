@@ -43,7 +43,7 @@ public class TilemapVisualizer : MonoBehaviour
             //spawn player
             if (canSpawnPlayer)
             {
-                playerPos = new Vector3(position.x + 0.5f, position.y + 0.2f, 0);
+                playerPos = new Vector3(position.x + 0.5f, position.y + 0.5f, 0);
                 Instantiate(playerPrefab, playerPos, Quaternion.identity, SpawnManager);
                 canSpawnPlayer = false;
             }

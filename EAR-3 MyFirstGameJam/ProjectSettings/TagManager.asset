@@ -7,7 +7,6 @@ TagManager:
   - Enemy
   - bullet
   - healthslider
-  - Door
   layers:
   - Default
   - TransparentFX

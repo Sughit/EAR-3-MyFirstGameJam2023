@@ -23,17 +23,7 @@ public class scriptWeapon : MonoBehaviour
 
     void Update()
     {
-        if(ammo>0)
-        {
-            if(Input.GetMouseButton(0))
-            {   
-                if(canFire)
-                {
-                    GetComponent<Animator>().Play("animatietras");
-                    StartCoroutine(Fire());  
-                }
-            }
-        }
+
 
         if(ammo<30)
         {
@@ -47,6 +37,21 @@ public class scriptWeapon : MonoBehaviour
                 textAmmo.text = ammo.ToString();
 
 
+    }
+
+    void FixedUpdate()
+    {
+        if(ammo>0)
+        {
+            if(Input.GetMouseButton(0))
+            {   
+                if(canFire)
+                {
+                    GetComponent<Animator>().Play("animatietras");
+                    StartCoroutine(Fire());  
+                }
+            }
+        }       
     }
 
 

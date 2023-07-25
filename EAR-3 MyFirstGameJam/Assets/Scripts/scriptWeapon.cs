@@ -15,10 +15,6 @@ public class scriptWeapon : MonoBehaviour
     public GameObject incarcator;
     public GameObject sunet;
     AudioSource rePoc;
-
-
-    Vector2 lookDirection;
-    float lookAngle;
     
     void Start()
     {
@@ -42,8 +38,6 @@ public class scriptWeapon : MonoBehaviour
 
 
     }
-
-    
 
     void FixedUpdate()
     {
@@ -74,7 +68,7 @@ public class scriptWeapon : MonoBehaviour
         ammo=30;
         
 
-        
+
 
     }
 

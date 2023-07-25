@@ -1,19 +1,38 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.EventSystems;
 
-public class healthBoost : MonoBehaviour//, IPointerClickHandler
+public class healthBoost : MonoBehaviour
 {
-    // public void OnPointerClick(PointerEventData pointerEventData)
-    // {
-    //     HealthBoost();
+    public useCardI healthCard;
+    private ViataPlayer player;
 
-    //     manager.CycleCards();
-    // }
+    void Update()
+    {
+        if(healthCard.cardUsed)
+        {
+            StartCoroutine(HealthBoost());
+        }
+    }
 
-    // void HealthBoost()
-    // {
-    //     GameObject player = GameObject.Find("GENERARE/SPAWNED/parinte player(Clone)").GetComponent<
-    // }
+    IEnumerator HealthBoost()
+    {
+        player = GameObject.Find("GENERARE/SPAWNED/parinte player(Clone)/player").GetComponent<ViataPlayer>();
+
+        if(player != null)
+        {
+            Debug.Log("player found");
+        }
+
+        if(player.health <= 80)
+        {
+            player.health += 20f;
+        }
+        else
+        {
+            player.health = player.maxHealth;
+        }
+        yield return null;
+    }
 }

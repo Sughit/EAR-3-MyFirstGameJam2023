@@ -33,11 +33,13 @@ public class Movement : MonoBehaviour
 
         transform.rotation = Quaternion.Euler(0, 0, lookAngle);
         
-        if(Input.GetKey(KeyCode.LeftShift))
-                speed=sprint;
+        //trebuie sa renuntam la sprintul tau pentru binele tuturor
+        
+        // if(Input.GetKey(KeyCode.LeftShift))
+        //         speed=sprint;
 
-            else
-            speed=speed2;
+        // else
+        //     speed=speed2;
         
     }
     void FixedUpdate()

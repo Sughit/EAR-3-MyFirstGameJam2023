@@ -18073,7 +18073,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1234838206}
-  m_LocalRotation: {x: 0.0026215473, y: 0.022857033, z: -0.000059936658, w: 0.99973536}
+  m_LocalRotation: {x: 0.0026215261, y: 0.022857, z: -0.00005993609, w: 0.99973536}
   m_LocalPosition: {x: 14.299999, y: 5.699997, z: -10}
   m_LocalScale: {x: 3.9223115, y: 3.9795098, z: 1.006278}
   m_ConstrainProportionsScale: 0
@@ -19874,6 +19874,7 @@ GameObject:
   - component: {fileID: 1431192554}
   - component: {fileID: 1431192553}
   - component: {fileID: 1431192555}
+  - component: {fileID: 1431192556}
   m_Layer: 0
   m_Name: cardEffectsManager
   m_TagString: Untagged
@@ -19924,6 +19925,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthCard: {fileID: 1740904507}
+--- !u!114 &1431192556
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1431192552}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9eb7693084fe5249818724849055701, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  grenadeCard: {fileID: 1783385235}
+  force: 100
+  grenade: {fileID: 8976704285231839083, guid: d9718fcc76ff0e84da8b2382f5795a0a, type: 3}
+  punctDeTragere: {fileID: 1924017036}
+  throwDis: 10
+  throwDuration: 5
 --- !u!1 &1431890592
 GameObject:
   m_ObjectHideFlags: 0
@@ -26778,7 +26797,7 @@ GameObject:
   - component: {fileID: 1740904505}
   - component: {fileID: 1740904507}
   m_Layer: 5
-  m_Name: card2
+  m_Name: healthCard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -28189,7 +28208,7 @@ GameObject:
   - component: {fileID: 1783385233}
   - component: {fileID: 1783385235}
   m_Layer: 5
-  m_Name: card5
+  m_Name: grenadeCard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -32554,15 +32573,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6424263089962653621, guid: 01ddc28006e4fdd43b7e10798d5317fe, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.0026215473
+      value: 0.0026215261
       objectReference: {fileID: 0}
     - target: {fileID: 6424263089962653621, guid: 01ddc28006e4fdd43b7e10798d5317fe, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.022857033
+      value: 0.022857
       objectReference: {fileID: 0}
     - target: {fileID: 6424263089962653621, guid: 01ddc28006e4fdd43b7e10798d5317fe, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.000059936658
+      value: -0.00005993609
       objectReference: {fileID: 0}
     - target: {fileID: 6424263089962653621, guid: 01ddc28006e4fdd43b7e10798d5317fe, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x

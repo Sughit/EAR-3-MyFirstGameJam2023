@@ -16,21 +16,22 @@ public class trowGrenade : MonoBehaviour
 
     void Update()
     {
+        punctDeTragere=GameObject.Find("/GENERARE/SPAWNED/parinte player(Clone)/player/arma/punctTragere").GetComponent<Transform>();
         if(grenadeCard.cardUsed)
-        {
-            Instantiate(grenade, punctDeTragere.position, punctDeTragere.rotation);
-            // StartCoroutine(ExplodeGrenade());
+        {          // StartCoroutine(ExplodeGrenade());
             Arunca();
         }
     }
 
     void Arunca()
     {
+        GameObject grenade11 = Instantiate(grenade, punctDeTragere.position, punctDeTragere.rotation);
         grenadeT = grenade.GetComponent<Transform>();
         //se calculeaza pozitia finala
         endPos = new Vector3(grenadeT.position.x, grenadeT.position.y + throwDis, 0);
         //arunca grenada
-        grenadeT.position = Vector3.Lerp(Vector3.up, endPos, throwDuration);
+        
+        grenade11.GetComponent<Rigidbody2D>().AddForce(punctDeTragere.up * force, ForceMode2D.Impulse);
     }
 
     IEnumerator ExplodeGrenade()

@@ -11,6 +11,7 @@ public class EnemyScript : MonoBehaviour
 
 
     GameObject player;
+    public GameObject glont;
 
 
 
@@ -33,8 +34,9 @@ public class EnemyScript : MonoBehaviour
             transform.position = Vector2.MoveTowards(this.transform.position, player.transform.position, speed *Time.deltaTime); 
             transform.rotation = Quaternion.Euler(Vector3.forward * angle);
         }
+
     }
-    
+
 
     
 
@@ -61,14 +63,18 @@ public class EnemyScript : MonoBehaviour
         }
     }
 
-        void OnTriggerEnter2D(Collider2D collision)
+
+        
+/*        void OnCollisionEnter2D(Collision2D collision)
     {
          if (collision.gameObject.tag == "bullet")
          {
             TakeDamage(20);
             Destroy(collision.gameObject);
          }
-    }
+    }*/
+
+    
 
     IEnumerator CuloareDamage()
     {

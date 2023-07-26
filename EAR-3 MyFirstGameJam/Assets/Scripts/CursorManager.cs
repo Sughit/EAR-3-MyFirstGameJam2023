@@ -12,7 +12,8 @@ public class CursorManager : MonoBehaviour
 
 
     void Start()
-    {
+    {   
+         Time.timeScale = 0f;
 
         cursorHotspot = new Vector2(cursorTexture.width / 2, cursorTexture.height / 2);
         Cursor.SetCursor(cursorTexture, cursorHotspot, CursorMode.Auto);
@@ -25,5 +26,10 @@ public class CursorManager : MonoBehaviour
         scriptGenerator=GameObject.Find("/GENERARE/RoomFirstMapGenerator");
         generator = scriptGenerator.GetComponent<RoomFirstDungeonGenerator>();
         generator.GenerateDungeon();
+    }
+
+    public void SaInceapaAventura()
+    {
+        Time.timeScale = 1f;
     }
 }

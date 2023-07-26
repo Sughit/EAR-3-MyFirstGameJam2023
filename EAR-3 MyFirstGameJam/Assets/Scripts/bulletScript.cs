@@ -8,6 +8,7 @@ public class bulletScript : MonoBehaviour
      public float circleRange;
      EnemyScript enemyScript;
      public Transform varf;
+     public int damage;
 
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -29,7 +30,7 @@ public class bulletScript : MonoBehaviour
         {
                 if(enemyScript = collider.GetComponent<EnemyScript>())
                 {
-                    enemyScript.TakeDamage(20);
+                    enemyScript.TakeDamage(damage);
                     Destroy(gameObject);
                     
                 }

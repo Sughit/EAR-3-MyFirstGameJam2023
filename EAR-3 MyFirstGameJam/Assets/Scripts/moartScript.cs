@@ -8,10 +8,12 @@ public class moartScript : MonoBehaviour
     public GameObject meniuMoarte;
     public GameObject carti;
     ViataPlayer viataPlayer;
-    public GameObject player;
+    GameObject player;
+    public bool meniuMoarteDeschis=false;
 
     void Start()
     {
+        meniuMoarteDeschis=false;
         player = GameObject.Find("/GENERARE/SPAWNED/parinte player(Clone)/player");
         viataPlayer = player.GetComponent<ViataPlayer>();
     }
@@ -28,6 +30,7 @@ public class moartScript : MonoBehaviour
         carti.SetActive(false);
         yield return new WaitForSeconds(1);
         meniuMoarte.SetActive(true);
+        meniuMoarteDeschis=true;
         
     }
 }

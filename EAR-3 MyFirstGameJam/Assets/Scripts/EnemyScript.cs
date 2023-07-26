@@ -124,7 +124,7 @@ public class EnemyScript : MonoBehaviour
         health -= damage;
         healthBar.UpdateHealthBar(health, maxHealth);
 
-        if(health==0)
+        if(health<=0)
         {
             Destroy(gameObject);
         }

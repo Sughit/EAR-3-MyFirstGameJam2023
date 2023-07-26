@@ -48,4 +48,12 @@ public class glontInamic : MonoBehaviour
         Vector3 position = varf.position;
         Gizmos.DrawWireSphere(position, circleRange);
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag != "Player")
+        {
+                Destroy(gameObject);
+        }
+    }
 }

@@ -27,11 +27,12 @@ public class healthBoost : MonoBehaviour
 
         if(player.health <= 80)
         {
-            player.health += 20f;
+            player.NuMaiDaCaMaDoare(-20f);
         }
         else
         {
-            player.health = player.maxHealth;
+            player.health=100;
+            player.UpdateHealthBarPlayer(player.health, player.maxHealth);
         }
         yield return null;
     }

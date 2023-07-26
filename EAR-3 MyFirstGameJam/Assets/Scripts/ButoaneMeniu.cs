@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class ButoaneMeniu : MonoBehaviour
 {
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -15,4 +17,5 @@ public class ButoaneMeniu : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
+
 }

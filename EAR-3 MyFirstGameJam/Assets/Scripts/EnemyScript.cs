@@ -29,7 +29,7 @@ public class EnemyScript : MonoBehaviour
     public GameObject enemyProjectile;
  
     public float followPlayerRange;
-    private bool inRange;
+    public bool inRange;
     public float attackRange;
  
     public float startTimeBtwnShots;

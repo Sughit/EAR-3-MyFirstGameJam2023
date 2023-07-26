@@ -20,6 +20,8 @@ public class bulletScript : MonoBehaviour
         PentruDetectare();
     }
 
+    
+
 
     public void PentruDetectare()
     {

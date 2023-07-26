@@ -6,14 +6,32 @@ public class glontInamic : MonoBehaviour
 {
     public float bulletSpeed;
     public float lifeTime;
+    public float circleRange;
+    public Transform varf;
+    ViataPlayer ViataPlayer;
  
-    // Start is called before the first frame update
     void Start()
     {
         Invoke("DestroyProjectile", lifeTime);
     }
+
+    void Update()
+    {
+        Detectare();
+    }
+
+    void Detectare()
+    {
+        foreach(Collider2D collider in Physics2D.OverlapCircleAll(varf.position, circleRange))
+        {
+                if(ViataPlayer = collider.GetComponent<ViataPlayer>())
+                {
+                    ViataPlayer.NuMaiDaCaMaDoare(10);
+                    Destroy(gameObject);
+                }
+        }
+    }
  
-    // Update is called once per frame
     void FixedUpdate()
     {
         transform.Translate(Vector2.right * bulletSpeed * Time.deltaTime);
@@ -22,5 +40,12 @@ public class glontInamic : MonoBehaviour
     void DestroyProjectile()
     {
         Destroy(gameObject);
+    }
+
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.red;
+        Vector3 position = varf.position;
+        Gizmos.DrawWireSphere(position, circleRange);
     }
 }

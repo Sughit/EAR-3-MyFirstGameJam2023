@@ -612,6 +612,9 @@ GameObject:
   - component: {fileID: 265009354}
   - component: {fileID: 265009353}
   - component: {fileID: 265009352}
+  - component: {fileID: 265009357}
+  - component: {fileID: 265009356}
+  - component: {fileID: 265009355}
   m_Layer: 5
   m_Name: restart
   m_TagString: Untagged
@@ -684,6 +687,42 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 265009357}
+        m_TargetAssemblyTypeName: selectCardI, Assembly-CSharp
+        m_MethodName: RestartCardI
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 265009356}
+        m_TargetAssemblyTypeName: selectCardII, Assembly-CSharp
+        m_MethodName: RestartCardII
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 265009355}
+        m_TargetAssemblyTypeName: selectCardIII, Assembly-CSharp
+        m_MethodName: RestartCardIII
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 601567925}
         m_TargetAssemblyTypeName: ButoaneMeniu, Assembly-CSharp
         m_MethodName: restart
@@ -734,6 +773,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 265009350}
   m_CullTransparentMesh: 1
+--- !u!114 &265009355
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 265009350}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de62ca64c23b1f442903325df1544e8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  manager: {fileID: 1689200185}
+  cardToAdd: {fileID: 1746853566}
+  maxCardsInACategory: 0
+--- !u!114 &265009356
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 265009350}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13766dbfe4807a443a461c3c2a0a8496, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  manager: {fileID: 1689200185}
+  cardToAdd: {fileID: 1746853566}
+  maxCardsInACategory: 0
+--- !u!114 &265009357
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 265009350}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a207a4c7c23c45e4fa0ff32c072d9bd0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  manager: {fileID: 1689200185}
+  cardToAdd: {fileID: 1746853566}
+  maxCardsInACategory: 0
 --- !u!1 &270848857
 GameObject:
   m_ObjectHideFlags: 0
@@ -817,7 +901,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 270848860}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 601567925}
+        m_TargetAssemblyTypeName: ButoaneMeniu, Assembly-CSharp
+        m_MethodName: MainMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &270848860
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1316,6 +1412,9 @@ GameObject:
   - component: {fileID: 482242404}
   - component: {fileID: 482242403}
   - component: {fileID: 482242402}
+  - component: {fileID: 482242407}
+  - component: {fileID: 482242406}
+  - component: {fileID: 482242405}
   m_Layer: 5
   m_Name: restart
   m_TagString: Untagged
@@ -1388,6 +1487,42 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 482242407}
+        m_TargetAssemblyTypeName: selectCardI, Assembly-CSharp
+        m_MethodName: RestartCardI
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 482242406}
+        m_TargetAssemblyTypeName: selectCardII, Assembly-CSharp
+        m_MethodName: RestartCardII
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 482242405}
+        m_TargetAssemblyTypeName: selectCardIII, Assembly-CSharp
+        m_MethodName: RestartCardIII
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 601567925}
         m_TargetAssemblyTypeName: ButoaneMeniu, Assembly-CSharp
         m_MethodName: restart
@@ -1438,6 +1573,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 482242400}
   m_CullTransparentMesh: 1
+--- !u!114 &482242405
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 482242400}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de62ca64c23b1f442903325df1544e8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  manager: {fileID: 1689200185}
+  cardToAdd: {fileID: 1746853566}
+  maxCardsInACategory: 0
+--- !u!114 &482242406
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 482242400}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13766dbfe4807a443a461c3c2a0a8496, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  manager: {fileID: 1689200185}
+  cardToAdd: {fileID: 1746853566}
+  maxCardsInACategory: 0
+--- !u!114 &482242407
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 482242400}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a207a4c7c23c45e4fa0ff32c072d9bd0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  manager: {fileID: 1689200185}
+  cardToAdd: {fileID: 1746853566}
+  maxCardsInACategory: 0
 --- !u!224 &519927874 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6146311553141214439, guid: e3b92225d32d128419d74358561e68ce, type: 3}
@@ -3403,7 +3583,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1463693781}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 601567925}
+        m_TargetAssemblyTypeName: ButoaneMeniu, Assembly-CSharp
+        m_MethodName: MainMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1463693781
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3673,6 +3865,17 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 50}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1746853566 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7018669548623026108, guid: 65ac9ebe902010c41a341e2239cd8945, type: 3}
+  m_PrefabInstance: {fileID: 1342713491}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1777272876
 GameObject:
   m_ObjectHideFlags: 0

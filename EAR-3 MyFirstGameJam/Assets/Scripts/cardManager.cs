@@ -41,4 +41,21 @@ public class cardManager : MonoBehaviour
         cardsII[Random.Range(0, cardsII.Length)].gameObject.SetActive(true);
         cardsIII[Random.Range(0, cardsIII.Length)].gameObject.SetActive(true);
     }
+
+    /*public void PentruRestart()
+    {
+         for(int i=0;i<3;i++)
+         {
+            cardsI[i]=null;
+         }
+         for(int i=0;i<3;i++)
+         {
+            cardsII[i]=null;
+         }
+         for(int i=0;i<3;i++)
+         {
+            cardsIII[i]=null;
+         }
+
+    }*/
 }

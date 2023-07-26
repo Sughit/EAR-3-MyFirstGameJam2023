@@ -10,13 +10,13 @@ public class cardManager : MonoBehaviour
     public Image[] cardsII;
     public Image[] cardsIII;
 
-    void Start()
-    {
-        Debug.Log("carti alese");
-        cardsI[Random.Range(0, cardsI.Length)].gameObject.SetActive(true);
-        cardsII[Random.Range(0, cardsII.Length)].gameObject.SetActive(true);
-        cardsIII[Random.Range(0, cardsIII.Length)].gameObject.SetActive(true);
-    }
+    // void Start()
+    // {
+    //     Debug.Log("carti alese");
+    //     cardsI[Random.Range(0, cardsI.Length)].gameObject.SetActive(true);
+    //     cardsII[Random.Range(0, cardsII.Length)].gameObject.SetActive(true);
+    //     cardsIII[Random.Range(0, cardsIII.Length)].gameObject.SetActive(true);
+    // }
 
     public void CycleCards()
     {

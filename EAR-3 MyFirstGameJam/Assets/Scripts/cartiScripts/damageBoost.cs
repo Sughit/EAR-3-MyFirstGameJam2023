@@ -8,6 +8,7 @@ public class damageBoost : MonoBehaviour
     private bulletScript bullet;
     public float maxDamageBoost;
     public float boostDuration;
+    Movement player;
 
     void Update()
     {

@@ -27,7 +27,7 @@ public class usa : MonoBehaviour
     {
         if(collision.gameObject.tag =="Player")
         {
-            doorText.gameObject.SetActive(true);
+            doorText.gameObject.SetActive(false);
             isInRange = false;
         }
     }

@@ -22,7 +22,6 @@ public class meniuPauzaScript : MonoBehaviour
         {
         if(Input.GetKeyDown(KeyCode.Escape))
         {
-            Debug.Log("dwdwd");
             Time.timeScale=0f;
             meniuPauza.SetActive(true);
             meniuDeschis=true;

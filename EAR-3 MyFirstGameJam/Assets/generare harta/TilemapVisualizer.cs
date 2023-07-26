@@ -25,10 +25,10 @@ public class TilemapVisualizer : MonoBehaviour
 
     //pentru usa care duce la nivelul urmator 
 
-    // public GameObject nextDoor;
+    public GameObject nextDoor;
     // public GameObject nextDoorLeft;
     // public GameObject nextDoorRight;
-    // private bool isDoor = true;
+    private bool isDoor = true;
 
     public void PaintFloorTiles(IEnumerable<Vector2Int> floorPositions)
     {
@@ -98,11 +98,11 @@ public class TilemapVisualizer : MonoBehaviour
         else if (WallTypesHelper.wallTop.Contains(typeAsInt))
         {
             tile = wallTop;
-            // if(isDoor && Vector3.Distance(new Vector3(position.x + 0.5f, position.y + 0.5f, 0), playerPos) >= 6 * playerSpawnArea)
-            // {
-            //     Instantiate(nextDoor, new Vector3(position.x + 0.5f, position.y + 0.5f, 0), Quaternion.identity, SpawnManager);
-            //     isDoor = false;
-            // }
+            if(isDoor && Vector3.Distance(new Vector3(position.x, position.y, 0), playerPos) >= 4 * playerSpawnArea)
+            {
+                Instantiate(nextDoor, new Vector3(position.x + 0.5f, position.y + 0.5f, 0), Quaternion.identity, SpawnManager);
+                isDoor = false;
+            }
         }
 
         if (tile != null)
@@ -121,9 +121,9 @@ public class TilemapVisualizer : MonoBehaviour
         wallTilemap.ClearAllTiles();
         DestroyWithTag("Enemy");
         DestroyWithTag("Player");
-        // DestroyWithTag("Door");
+        DestroyWithTag("Door");
         canSpawnPlayer = true;
-        // isDoor = true;
+        isDoor = true;
     }
 
     public void PaintSingleCornerWall(Vector2Int position, string binaryType)

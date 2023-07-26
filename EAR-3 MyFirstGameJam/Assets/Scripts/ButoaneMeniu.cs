@@ -18,4 +18,9 @@ public class ButoaneMeniu : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
+    public void MainMenu()
+    {
+        SceneManager.LoadScene("meniuPrincipal");
+    }
+
 }

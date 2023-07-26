@@ -23,4 +23,9 @@ public class selectCardII : MonoBehaviour
             Debug.Log("Too many cards");
         }
     }
+
+     public void RestartCardII()
+    {
+        currentNumOfCardsInDeck_2=0;
+    }
 }

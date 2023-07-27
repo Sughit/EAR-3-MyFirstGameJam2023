@@ -104,6 +104,8 @@ MonoBehaviour:
   lifeTime: 2
   circleRange: 0.02
   varf: {fileID: 5370867181226364367}
+  damage: 10
+  resistenceDamage: 7
 --- !u!50 &-8588472616279239300
 Rigidbody2D:
   serializedVersion: 4

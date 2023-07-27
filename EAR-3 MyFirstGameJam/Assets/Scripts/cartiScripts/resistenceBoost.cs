@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ResistenceBoost : MonoBehaviour
+public class resistenceBoost : MonoBehaviour
 {
     public useCardI resistenceCard;
     public bool isBoost;

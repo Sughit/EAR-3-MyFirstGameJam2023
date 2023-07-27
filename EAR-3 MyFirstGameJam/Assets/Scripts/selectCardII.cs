@@ -8,7 +8,7 @@ public class selectCardII : MonoBehaviour
     public cardManager manager;
     public Image cardToAdd;
     public int maxCardsInACategory;
-    static int currentNumOfCardsInDeck_2;
+    public static int currentNumOfCardsInDeck_2;
 
     public void AddCard()
     {

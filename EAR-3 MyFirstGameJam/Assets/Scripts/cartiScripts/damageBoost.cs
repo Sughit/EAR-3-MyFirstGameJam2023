@@ -5,41 +5,23 @@ using UnityEngine;
 public class damageBoost : MonoBehaviour
 {
     public useCardI damageCard;
-    private bulletScript bullet;
-    public float maxDamageBoost;
+    public bool isBoost;
     public float boostDuration;
-    Movement player;
 
     void Update()
     {
+        
         if(damageCard.cardUsed)
         {
-            StartCoroutine(DamageBoost());
+            StartCoroutine(IncreaseDamage());
         }
     }
 
-    IEnumerator DamageBoost()
+    IEnumerator IncreaseDamage()
     {
-        player = GameObject.Find("GENERARE/SPAWNED/parinte player(Clone)/player").GetComponent<Movement>();
-
-        if(player != null)
-        {
-            Debug.Log("player found");
-        }
-
-        StartCoroutine(DamageEffect());
+        isBoost = true;
+        yield return new WaitForSeconds(boostDuration);
+        isBoost = false;
         yield return null;
-    }
-
-    IEnumerator DamageEffect()
-    {
-        if(bullet.damage != maxDamageBoost)
-        {
-            bullet.damage += 20;
-            yield return new WaitForSeconds(boostDuration);
-            Debug.Log("speed effect is gone");
-            bullet.damage -= 20;
-        }
-        else yield return null;
     }
 }

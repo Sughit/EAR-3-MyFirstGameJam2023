@@ -9,7 +9,16 @@ public class glontInamic : MonoBehaviour
     public float circleRange;
     public Transform varf;
     ViataPlayer ViataPlayer;
+    public float damage;
+    public float resistenceDamage;
+
+    private resistenceBoost boost;
  
+    void Awake()
+    {
+        boost = GameObject.Find("cardEffectsManager").GetComponent<resistenceBoost>();
+    }
+
     void Start()
     {
         Invoke("DestroyProjectile", lifeTime);
@@ -17,7 +26,14 @@ public class glontInamic : MonoBehaviour
 
     void Update()
     {
-        Detectare();
+        if(boost.isBoost)
+        {
+            ResistenceBoost();
+        }
+        else
+        {
+            Detectare();
+        }
     }
 
     void Detectare()
@@ -26,7 +42,19 @@ public class glontInamic : MonoBehaviour
         {
                 if(ViataPlayer = collider.GetComponent<ViataPlayer>())
                 {
-                    ViataPlayer.NuMaiDaCaMaDoare(10);
+                    ViataPlayer.NuMaiDaCaMaDoare(damage);
+                    Destroy(gameObject);
+                }
+        }
+    }
+
+    void ResistenceBoost()
+    {
+        foreach(Collider2D collider in Physics2D.OverlapCircleAll(varf.position, circleRange))
+        {
+                if(ViataPlayer = collider.GetComponent<ViataPlayer>())
+                {
+                    ViataPlayer.NuMaiDaCaMaDoare(resistenceDamage);
                     Destroy(gameObject);
                 }
         }

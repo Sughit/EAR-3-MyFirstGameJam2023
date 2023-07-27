@@ -8,8 +8,15 @@ public class bulletScript : MonoBehaviour
      public float circleRange;
      EnemyScript enemyScript;
      public Transform varf;
-     public int damage;
+    public int damage;
+    public int damageBoost;
 
+    private damageBoost boost;
+
+    void Awake()
+    {
+        boost = GameObject.Find("cardEffectsManager").GetComponent<damageBoost>();
+    }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -18,7 +25,14 @@ public class bulletScript : MonoBehaviour
     void Update()
     {
         Object.Destroy(gameObject, 3.0f);
-        PentruDetectare();
+        if(boost.isBoost)
+        {
+            DamageBoost();
+        }
+        else
+        {
+            PentruDetectare();
+        }
     }
 
     
@@ -31,6 +45,19 @@ public class bulletScript : MonoBehaviour
                 if(enemyScript = collider.GetComponent<EnemyScript>())
                 {
                     enemyScript.TakeDamage(damage);
+                    Destroy(gameObject);
+                    
+                }
+        }
+    }
+
+    public void DamageBoost()
+    {
+        foreach(Collider2D collider in Physics2D.OverlapCircleAll(varf.position, circleRange))
+        {
+                if(enemyScript = collider.GetComponent<EnemyScript>())
+                {
+                    enemyScript.TakeDamage(damageBoost);
                     Destroy(gameObject);
                     
                 }

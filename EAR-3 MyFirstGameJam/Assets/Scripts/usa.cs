@@ -7,11 +7,13 @@ public class usa : MonoBehaviour
 {
     public Text doorText;
     public bool isInRange;
+    RoomFirstDungeonGenerator toNextFloor;
 
     // Start is called before the first frame update
     void Start()
     {
         doorText = GameObject.Find("Carti/door/doorText").GetComponent<Text>();
+        toNextFloor = GameObject.Find("GENERARE/RoomFirstMapGenerator").GetComponent<RoomFirstDungeonGenerator>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -39,6 +41,7 @@ public class usa : MonoBehaviour
             if(isInRange)
             {
                 Debug.Log("went to the next floor");
+                toNextFloor.GenerateDungeon();
             }
         }
     }

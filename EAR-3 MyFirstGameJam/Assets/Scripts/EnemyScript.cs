@@ -33,7 +33,8 @@ public class EnemyScript : MonoBehaviour
     Transform target;
     Vector2 moveDirection;
  
-
+    [SerializeField]
+    private LayerMask obstaclesLayerMask;
     
     void Awake()
     {
@@ -50,13 +51,19 @@ public class EnemyScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector3 differance = player.transform.position - gun.transform.position;
+        Vector3 differance = (player.transform.position - gun.transform.position).normalized;
         float rotZ = Mathf.Atan2(differance.y, differance.x) * Mathf.Rad2Deg;
         gun.transform.rotation = Quaternion.Euler(0f, 0f, rotZ);
+
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, differance.normalized, followPlayerRange, obstaclesLayerMask);
+        Debug.DrawRay(transform.position, differance * followPlayerRange, Color.magenta);
  
         if (Vector2.Distance(transform.position, player.transform.position) <= followPlayerRange)
         {
-            inRange = true;
+            if(hit.collider == null)
+            {
+                inRange = true;
+            }
         }
         else
         {

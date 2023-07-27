@@ -130,7 +130,7 @@ GameObject:
   - component: {fileID: 8682834968049754485}
   - component: {fileID: 6702299103671772316}
   - component: {fileID: 4776777038095107042}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Walls
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7565,6 +7565,6 @@ MonoBehaviour:
   wallDiagonalCornerUpLeft: {fileID: 11400000, guid: 5c6270708fa0a1843ba8945ca87a9d25, type: 2}
   SpawnManager: {fileID: 4762138245628552290}
   enemyPrefab: {fileID: 7581995733245156695, guid: ee12d6aa4101dbf448312e82228758c6, type: 3}
-  playerPrefab: {fileID: 6108456038316187526, guid: 00c067e325bcab64380271a5ba2e9523, type: 3}
+  playerPrefab: {fileID: 5227897718922631231, guid: 00c067e325bcab64380271a5ba2e9523, type: 3}
   playerSpawnArea: 6
   nextDoor: {fileID: 5566098477284484319, guid: 37111c37e95742547b9f271b324c5506, type: 3}

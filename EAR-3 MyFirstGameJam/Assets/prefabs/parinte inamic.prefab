@@ -880,7 +880,7 @@ MonoBehaviour:
   followPlayerRange: 6.24
   inRange: 0
   attackRange: 3.51
-  startTimeBtwnShots: 0.12
+  startTimeBtwnShots: 0.2
 --- !u!114 &7418678840165815639
 MonoBehaviour:
   m_ObjectHideFlags: 0

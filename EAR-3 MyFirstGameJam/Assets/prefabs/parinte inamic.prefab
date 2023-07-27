@@ -723,6 +723,7 @@ GameObject:
   - component: {fileID: 7581995733016499153}
   - component: {fileID: 299004841561574470}
   - component: {fileID: 1310148832052133133}
+  - component: {fileID: 7418678840165815639}
   m_Layer: 0
   m_Name: inamic
   m_TagString: Untagged
@@ -869,8 +870,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5037ada20110c6444b8fce4bd2783422, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 0
-  maxHealth: 100
   sunet: {fileID: 3190401302596963201, guid: fb6c76188f860e047a00c6151427faa9, type: 3}
   ammo: 30
   armaInamic: {fileID: 7581995732321568821}
@@ -882,6 +881,20 @@ MonoBehaviour:
   inRange: 0
   attackRange: 3.51
   startTimeBtwnShots: 0.12
+--- !u!114 &7418678840165815639
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7581995733016499164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 857774985727b8d4594bda522ee665e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
+  maxHealth: 100
 --- !u!1 &7581995733245156695
 GameObject:
   m_ObjectHideFlags: 0

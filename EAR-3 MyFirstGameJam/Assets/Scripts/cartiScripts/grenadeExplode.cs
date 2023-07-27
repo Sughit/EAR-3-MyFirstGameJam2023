@@ -4,10 +4,9 @@ using UnityEngine;
 
 public class grenadeExplode : MonoBehaviour
 {
-    EnemyScript enemyScript;
+    ViataEnemy enemyScript;
     public float timeToExplode;
     public float range;
-    private bool exploded;
 
     // Start is called before the first frame update
     void Start()
@@ -21,17 +20,13 @@ public class grenadeExplode : MonoBehaviour
         Debug.Log("grenade exploded");
         foreach(Collider2D collider in Physics2D.OverlapCircleAll(transform.position, range))
         {
-                if(enemyScript = collider.GetComponent<EnemyScript>())
+                if(enemyScript = collider.GetComponent<ViataEnemy>())
                 {
                     enemyScript.TakeDamage(40);
-                    exploded = true;
                     Destroy(this.gameObject);
                 }
         }
-        if(exploded)
-        {
-            Destroy(this.gameObject);
-        }
+        Destroy(this.gameObject);
 
         yield return null;
     }

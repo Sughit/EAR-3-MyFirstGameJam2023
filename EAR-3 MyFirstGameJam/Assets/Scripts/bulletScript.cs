@@ -6,7 +6,7 @@ public class bulletScript : MonoBehaviour
 {
      AudioSource poc;
      public float circleRange;
-     EnemyScript enemyScript;
+     ViataEnemy enemyScript;
      public Transform varf;
     public int damage;
     public int damageBoost;
@@ -42,7 +42,7 @@ public class bulletScript : MonoBehaviour
     {
         foreach(Collider2D collider in Physics2D.OverlapCircleAll(varf.position, circleRange))
         {
-                if(enemyScript = collider.GetComponent<EnemyScript>())
+                if(enemyScript = collider.GetComponent<ViataEnemy>())
                 {
                     enemyScript.TakeDamage(damage);
                     Destroy(gameObject);
@@ -55,7 +55,7 @@ public class bulletScript : MonoBehaviour
     {
         foreach(Collider2D collider in Physics2D.OverlapCircleAll(varf.position, circleRange))
         {
-                if(enemyScript = collider.GetComponent<EnemyScript>())
+                if(enemyScript = collider.GetComponent<ViataEnemy>())
                 {
                     enemyScript.TakeDamage(damageBoost);
                     Destroy(gameObject);

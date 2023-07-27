@@ -4,10 +4,6 @@ using UnityEngine;
 
 public class EnemyScript : MonoBehaviour
 {
-    healthBarScript healthBar;
-
-    public float health=100f; 
-    public float maxHealth=100f;
 
     private float angle;
     private Rigidbody2D rb;
@@ -41,14 +37,11 @@ public class EnemyScript : MonoBehaviour
     
     void Awake()
     {
-        healthBar = GetComponentInChildren<healthBarScript>();
         player = GameObject.Find("/GENERARE/SPAWNED/parinte player(Clone)/player");
         moveSpeed2=moveSpeed;
     }
     void Start()
     {
-        health=maxHealth;
-        healthBar.UpdateHealthBar(health, maxHealth);
         rb = this.GetComponent<Rigidbody2D>();
         target= player.transform;
     }
@@ -112,45 +105,13 @@ public class EnemyScript : MonoBehaviour
         yield return new WaitForSeconds(2);
         ammo=30;
         
-    }
-
-
-    
-
-
-    
-    public void TakeDamage(float damage)
-    {
-        health -= damage;
-        healthBar.UpdateHealthBar(health, maxHealth);
-
-        if(health<=0)
-        {
-            Destroy(gameObject);
-        }
-    }
-
-
-        
-/*        void OnCollisionEnter2D(Collision2D collision)
-    {
-         if (collision.gameObject.tag == "bullet")
-         {
-            TakeDamage(20);
-            Destroy(collision.gameObject);
-         }
-    }*/
-
-    
+    }    
 
     IEnumerator CuloareDamage()
     {
         yield return new WaitForSeconds(1F);
     }
 
-
-    
- 
     void FixedUpdate()
     {
         if (inRange)

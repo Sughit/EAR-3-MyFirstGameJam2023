@@ -51,6 +51,15 @@ public class EnemyScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(player == null)
+        {
+            player = GameObject.Find("/GENERARE/SPAWNED/parinte player(Clone)/player");
+        }
+        if(target == null)
+        {
+            target = player.transform;
+        }
+
         Vector3 differance = (player.transform.position - gun.transform.position).normalized;
         float rotZ = Mathf.Atan2(differance.y, differance.x) * Mathf.Rad2Deg;
         gun.transform.rotation = Quaternion.Euler(0f, 0f, rotZ);

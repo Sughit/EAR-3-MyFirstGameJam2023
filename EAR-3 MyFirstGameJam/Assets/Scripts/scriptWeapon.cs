@@ -27,7 +27,10 @@ public class scriptWeapon : MonoBehaviour
 
     void Update()
     {
-
+        if(textAmmo == null)
+        {
+            textAmmo = GameObject.Find("Canvas/ammoPanel/TextAmmo").GetComponent<Text>();
+        }
 
         if(ammo<30)
         {

@@ -160,4 +160,5 @@ public class EnemyScript : MonoBehaviour
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, attackRange);
     }
+    
 }

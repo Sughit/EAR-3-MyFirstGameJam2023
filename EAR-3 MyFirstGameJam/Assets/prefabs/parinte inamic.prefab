@@ -724,6 +724,7 @@ GameObject:
   - component: {fileID: 299004841561574470}
   - component: {fileID: 1310148832052133133}
   - component: {fileID: 7418678840165815639}
+  - component: {fileID: 1322040086}
   m_Layer: 0
   m_Name: inamic
   m_TagString: Untagged
@@ -901,6 +902,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 100
   maxHealth: 100
+--- !u!114 &1322040086
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7581995733016499164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b7f31b2e04947649a89b05f4207c4e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inamic: {fileID: 0}
 --- !u!1 &7581995733245156695
 GameObject:
   m_ObjectHideFlags: 0

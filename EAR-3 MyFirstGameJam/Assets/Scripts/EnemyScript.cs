@@ -34,7 +34,7 @@ public class EnemyScript : MonoBehaviour
     Vector2 moveDirection;
  
     [SerializeField]
-    private LayerMask obstaclesLayerMask;
+    private LayerMask obstaclesLayerMask, targetsLayerMask;
     
     void Awake()
     {
@@ -70,28 +70,33 @@ public class EnemyScript : MonoBehaviour
         {
             inRange = false;
         }
- 
+
+        RaycastHit2D attackObstacles = Physics2D.Raycast(transform.position, differance.normalized, attackRange, obstaclesLayerMask);
+        RaycastHit2D attack = Physics2D.Raycast(transform.position, differance.normalized, attackRange, targetsLayerMask);
         if (Vector2.Distance(transform.position, player.transform.position) <= attackRange)
         {
-            if(hit.collider == null)
+            if(attackObstacles.collider == null)
             {
-                if (timeBtwnShots <= 0)
+                if(attack.collider != null)
                 {
-                    if(ammo>0)
+                    if (timeBtwnShots <= 0)
                     {
-                        Instantiate(enemyProjectile, shotPoint.position, shotPoint.transform.rotation);
-                        timeBtwnShots = startTimeBtwnShots;
-                        Instantiate(sunet);
-                        ammo--;
-                    } else 
-                    {
-                        StartCoroutine(Reload());
+                        if(ammo>0)
+                        {
+                            Instantiate(enemyProjectile, shotPoint.position, shotPoint.transform.rotation);
+                            timeBtwnShots = startTimeBtwnShots;
+                            Instantiate(sunet);
+                            ammo--;
+                        } else 
+                        {
+                            StartCoroutine(Reload());
                     
+                        }
                     }
-                }
-                else
-                {
-                    timeBtwnShots -= Time.deltaTime;
+                    else
+                    {
+                        timeBtwnShots -= Time.deltaTime;
+                    }
                 }
             }
         }

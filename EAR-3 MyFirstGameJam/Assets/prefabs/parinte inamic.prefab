@@ -884,6 +884,9 @@ MonoBehaviour:
   obstaclesLayerMask:
     serializedVersion: 2
     m_Bits: 64
+  targetsLayerMask:
+    serializedVersion: 2
+    m_Bits: 128
 --- !u!114 &7418678840165815639
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -78,7 +78,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   meniuMoarte: {fileID: 7198502235127565346}
   carti: {fileID: 0}
-  player: {fileID: 3998080731317300194}
+  meniuMoarteDeschis: 0
 --- !u!1 &2038055998369179865
 GameObject:
   m_ObjectHideFlags: 0
@@ -1035,7 +1035,7 @@ GameObject:
   - component: {fileID: 3998080731317300223}
   - component: {fileID: 3998080731317300192}
   - component: {fileID: 1585879442000930318}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -2093,7 +2093,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8411540452902995168}
-  m_LocalRotation: {x: 0.0027216307, y: 0.022856437, z: -0.00006222327, w: 0.99973506}
+  m_LocalRotation: {x: 0.0027214398, y: 0.022857958, z: -0.000062223044, w: 0.99973506}
   m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 3.9223113, y: 3.97951, z: 1.006278}
   m_ConstrainProportionsScale: 0

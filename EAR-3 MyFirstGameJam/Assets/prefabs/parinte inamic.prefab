@@ -880,7 +880,7 @@ MonoBehaviour:
   followPlayerRange: 6.24
   inRange: 0
   attackRange: 3.51
-  startTimeBtwnShots: 0.2
+  startTimeBtwnShots: 0.22
   obstaclesLayerMask:
     serializedVersion: 2
     m_Bits: 64

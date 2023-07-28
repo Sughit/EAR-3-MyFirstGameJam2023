@@ -38,7 +38,7 @@ public class bulletScript : MonoBehaviour
     
 
 
-    public void PentruDetectare()
+    void PentruDetectare()
     {
         foreach(Collider2D collider in Physics2D.OverlapCircleAll(varf.position, circleRange))
         {

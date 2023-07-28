@@ -100,7 +100,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc08c7b73b5eeb6429afc469d9dd162c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletSpeed: 5
+  bulletSpeed: 20
   lifeTime: 2
   circleRange: 0.02
   varf: {fileID: 5370867181226364367}

@@ -15,7 +15,7 @@ public class useCardI : MonoBehaviour
             if(Input.GetKeyDown(KeyCode.Alpha1))
             {
                 Debug.Log(this.gameObject + " used");
-                StartCoroutine(UseCard()); 
+                StartCoroutine(UseCard());
             }
         }
     }

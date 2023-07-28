@@ -73,23 +73,26 @@ public class EnemyScript : MonoBehaviour
  
         if (Vector2.Distance(transform.position, player.transform.position) <= attackRange)
         {
-            if (timeBtwnShots <= 0)
+            if(hit.collider == null)
             {
-                if(ammo>0)
+                if (timeBtwnShots <= 0)
                 {
-                Instantiate(enemyProjectile, shotPoint.position, shotPoint.transform.rotation);
-                timeBtwnShots = startTimeBtwnShots;
-                Instantiate(sunet);
-                ammo--;
-                } else 
-                {
-                    StartCoroutine(Reload());
+                    if(ammo>0)
+                    {
+                        Instantiate(enemyProjectile, shotPoint.position, shotPoint.transform.rotation);
+                        timeBtwnShots = startTimeBtwnShots;
+                        Instantiate(sunet);
+                        ammo--;
+                    } else 
+                    {
+                        StartCoroutine(Reload());
                     
+                    }
                 }
-            }
-            else
-            {
-                timeBtwnShots -= Time.deltaTime;
+                else
+                {
+                    timeBtwnShots -= Time.deltaTime;
+                }
             }
         }
 

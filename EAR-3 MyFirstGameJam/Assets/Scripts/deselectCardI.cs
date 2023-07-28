@@ -16,7 +16,7 @@ public class deselectCardI : MonoBehaviour
             if(manager.cardsI[i] == cardToRemove)
             {
                 manager.cardsI[i] = null;
-                selectCardI.currentNumOfCardsInDeck_1 = i;
+                selectCardI.currentNumOfCardsInDeck_1--;
             }
             else
             {

@@ -7,6 +7,7 @@ public class selectCardII : MonoBehaviour
 {
     public cardManager manager;
     public Image cardToAdd;
+    public Button buttonCard;
     public int maxCardsInACategory;
     public static int currentNumOfCardsInDeck_2;
 
@@ -16,6 +17,7 @@ public class selectCardII : MonoBehaviour
         if(currentNumOfCardsInDeck_2 < maxCardsInACategory)
         {
             manager.cardsII[currentNumOfCardsInDeck_2] = cardToAdd;
+            buttonCard.gameObject.SetActive(false);
             currentNumOfCardsInDeck_2++;
         }
         else

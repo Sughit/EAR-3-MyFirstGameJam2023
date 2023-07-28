@@ -42,6 +42,42 @@ public class cardManager : MonoBehaviour
         cardsIII[Random.Range(0, cardsIII.Length)].gameObject.SetActive(true);
     }
 
+    void Update()
+    {
+        if(cardsI[0] == null)
+        {
+            cardsI[0] = cardsI[1];
+            cardsI[1] = cardsI[2];
+            cardsI[2] = null;
+        }else if(cardsI[1] == null)
+        {
+            cardsI[1] = cardsI[2];
+            cardsI[2] = null;
+        }
+
+        if(cardsII[0] == null)
+        {
+            cardsII[0] = cardsII[1];
+            cardsII[1] = cardsII[2];
+            cardsII[2] = null;
+        }else if(cardsII[1] == null)
+        {
+            cardsII[1] = cardsII[2];
+            cardsII[2] = null;
+        }
+
+        if(cardsIII[0] == null)
+        {
+            cardsIII[0] = cardsIII[1];
+            cardsIII[1] = cardsIII[2];
+            cardsIII[2] = null;
+        }else if(cardsIII[1] == null)
+        {
+            cardsIII[1] = cardsIII[2];
+            cardsIII[2] = null;
+        }
+    }
+
     /*public void PentruRestart()
     {
          for(int i=0;i<3;i++)

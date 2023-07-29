@@ -41,8 +41,15 @@ public class usa : MonoBehaviour
             if(isInRange)
             {
                 Debug.Log("went to the next floor");
-               // ViataEnemy.health += 2f;
-               // glontInamic.damage += 2f;
+                // GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
+                // foreach(GameObject enemy in enemies)
+                // {
+                //     ViataEnemy viata = enemy.GetComponentInChildren<ViataEnemy>();
+                //     viata.health += 2f;
+                // }
+                ViataEnemy.maxHealth += 2f;
+                glontInamic.damage += 2f;
+                glontInamic.resistenceDamage += 2f;
                 toNextFloor.GenerateDungeon();
             }
         }

@@ -7,7 +7,7 @@ public class ViataEnemy : MonoBehaviour
     healthBarScript healthBar;
 
     public float health=100f; 
-    public float maxHealth=100f;
+    public static float maxHealth=100f;
 
     void Awake()
     {

@@ -92,8 +92,8 @@ public class wanderingAI : MonoBehaviour
 
         int walkTime = Random.Range(1, 5);
 
-
-
+        if(enemyScript.inRange==false)
+{
         isWandering = true;
 
 
@@ -133,7 +133,7 @@ public class wanderingAI : MonoBehaviour
         }
 
         isWandering = false;
-
+}
     }
 
     void OnCollisionEnter2D(Collision2D collision)

@@ -9,7 +9,7 @@ public class glontInamic : MonoBehaviour
     public float circleRange;
     public Transform varf;
     ViataPlayer ViataPlayer;
-    public static float damage;
+    public  float damage;
     public float resistenceDamage;
 
     private resistenceBoost boost;

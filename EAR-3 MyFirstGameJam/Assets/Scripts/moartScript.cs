@@ -6,15 +6,15 @@ public class moartScript : MonoBehaviour
 {
     
     public GameObject meniuMoarte;
-    public GameObject carti;
+    GameObject carti;
     ViataPlayer viataPlayer;
-    GameObject player;
+    public GameObject player;
     public bool meniuMoarteDeschis=false;
 
     void Start()
     {
+        carti =GameObject.Find("/Carti"); 
         meniuMoarteDeschis=false;
-        player = GameObject.Find("/GENERARE/SPAWNED/parinte player(Clone)/player");
         viataPlayer = player.GetComponent<ViataPlayer>();
     }
     void Update()

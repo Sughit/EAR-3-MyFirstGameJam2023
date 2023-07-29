@@ -41,6 +41,8 @@ public class usa : MonoBehaviour
             if(isInRange)
             {
                 Debug.Log("went to the next floor");
+                ViataEnemy.health += 2f;
+                glontInamic.damage += 2f;
                 toNextFloor.GenerateDungeon();
             }
         }

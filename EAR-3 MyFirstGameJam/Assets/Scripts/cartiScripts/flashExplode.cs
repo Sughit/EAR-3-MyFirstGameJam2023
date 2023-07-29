@@ -5,6 +5,7 @@ using UnityEngine;
 public class flashExplode : MonoBehaviour
 {
     EnemyScript enemyScript;
+    wanderingAI enemyWander;
     public float timeToExplode;
     public float flashedTime;
     public float range;
@@ -21,8 +22,10 @@ public class flashExplode : MonoBehaviour
         Debug.Log("flash exploded");
         foreach(Collider2D collider in Physics2D.OverlapCircleAll(transform.position, range))
         {
+            enemyWander = collider.GetComponent<wanderingAI>();
                 if(enemyScript = collider.GetComponent<EnemyScript>())
                 {
+                    enemyWander.enabled = false;
                     enemyScript.enabled = false;
                     StartCoroutine(Flashed());
                 }
@@ -35,8 +38,10 @@ public class flashExplode : MonoBehaviour
         yield return new WaitForSeconds(flashedTime);
         foreach(Collider2D collider in Physics2D.OverlapCircleAll(transform.position, range))
         {
+            enemyWander = collider.GetComponent<wanderingAI>();
                 if(enemyScript = collider.GetComponent<EnemyScript>())
                 {
+                    enemyWander.enabled = true;
                     enemyScript.enabled = true;
                 }
         }

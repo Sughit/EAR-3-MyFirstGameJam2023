@@ -6,7 +6,7 @@ public class ViataEnemy : MonoBehaviour
 {
     healthBarScript healthBar;
 
-    public float health=100f; 
+    public static float health=100f; 
     public float maxHealth=100f;
 
     void Awake()
@@ -28,6 +28,20 @@ public class ViataEnemy : MonoBehaviour
         if(health<=0)
         {
             Destroy(gameObject);
+        }
+    }
+
+    public void OnFire()
+    {
+        StartCoroutine(TakeFireDamage());
+    }
+
+    IEnumerator TakeFireDamage()
+    {
+        for(int i = 0; i < 5; i++)
+        {
+            TakeDamage(5f);
+            yield return new WaitForSeconds(3);
         }
     }
 }

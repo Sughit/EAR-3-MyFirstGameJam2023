@@ -9,6 +9,7 @@ public class CursorManager : MonoBehaviour
     private Vector2 cursorHotspot;
     RoomFirstDungeonGenerator generator;
     GameObject scriptGenerator;
+    AudioSource muzica;
 
 
     void Start()
@@ -26,6 +27,9 @@ public class CursorManager : MonoBehaviour
         scriptGenerator=GameObject.Find("/GENERARE/RoomFirstMapGenerator");
         generator = scriptGenerator.GetComponent<RoomFirstDungeonGenerator>();
         generator.GenerateDungeon();
+        muzica = GetComponent<AudioSource>();
+        muzica.Play(0);
+         
     }
 
     public void SaInceapaAventura()

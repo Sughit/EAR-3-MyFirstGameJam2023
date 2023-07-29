@@ -283,7 +283,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: c8cbacfe9719c5f428fc5aebb3d2deac, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 7b1043cbfa3af1e4481e0bc8c1c8e858, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.616
   m_Pitch: 1
@@ -6566,17 +6566,53 @@ PrefabInstance:
       propertyPath: m_Name
       value: Main Camera
       objectReference: {fileID: 0}
+    - target: {fileID: 6424263089962653514, guid: 01ddc28006e4fdd43b7e10798d5317fe, type: 3}
+      propertyPath: field of view
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 6424263089962653514, guid: 01ddc28006e4fdd43b7e10798d5317fe, type: 3}
+      propertyPath: far clip plane
+      value: 5000
+      objectReference: {fileID: 0}
+    - target: {fileID: 6424263089962653514, guid: 01ddc28006e4fdd43b7e10798d5317fe, type: 3}
+      propertyPath: near clip plane
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6424263089962653514, guid: 01ddc28006e4fdd43b7e10798d5317fe, type: 3}
+      propertyPath: orthographic size
+      value: 5.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6424263089962653620, guid: 01ddc28006e4fdd43b7e10798d5317fe, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6424263089962653620, guid: 01ddc28006e4fdd43b7e10798d5317fe, type: 3}
+      propertyPath: m_UpdateMethod
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6424263089962653620, guid: 01ddc28006e4fdd43b7e10798d5317fe, type: 3}
+      propertyPath: m_IgnoreTimeScale
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6424263089962653620, guid: 01ddc28006e4fdd43b7e10798d5317fe, type: 3}
+      propertyPath: m_BlendUpdateMethod
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6424263089962653620, guid: 01ddc28006e4fdd43b7e10798d5317fe, type: 3}
+      propertyPath: m_DefaultBlend.m_Style
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 6424263089962653621, guid: 01ddc28006e4fdd43b7e10798d5317fe, type: 3}
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6424263089962653621, guid: 01ddc28006e4fdd43b7e10798d5317fe, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1033.3551
+      value: -15.918478
       objectReference: {fileID: 0}
     - target: {fileID: 6424263089962653621, guid: 01ddc28006e4fdd43b7e10798d5317fe, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 35.40033
+      value: 16.912853
       objectReference: {fileID: 0}
     - target: {fileID: 6424263089962653621, guid: 01ddc28006e4fdd43b7e10798d5317fe, type: 3}
       propertyPath: m_LocalPosition.z
@@ -6588,15 +6624,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6424263089962653621, guid: 01ddc28006e4fdd43b7e10798d5317fe, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.0027214398
+      value: 0.0027214403
       objectReference: {fileID: 0}
     - target: {fileID: 6424263089962653621, guid: 01ddc28006e4fdd43b7e10798d5317fe, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.022857958
+      value: 0.022857007
       objectReference: {fileID: 0}
     - target: {fileID: 6424263089962653621, guid: 01ddc28006e4fdd43b7e10798d5317fe, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.000062223044
+      value: -0.00006222047
       objectReference: {fileID: 0}
     - target: {fileID: 6424263089962653621, guid: 01ddc28006e4fdd43b7e10798d5317fe, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x

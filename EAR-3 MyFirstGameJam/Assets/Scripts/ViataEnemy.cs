@@ -43,7 +43,7 @@ public class ViataEnemy : MonoBehaviour
         particuleFoc.SetActive(true);
         for(int i = 0; i < 5; i++)
         {
-            TakeDamage(5f);
+            TakeDamage(8f);
             yield return new WaitForSeconds(1);
         }
         particuleFoc.SetActive(false);

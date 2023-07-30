@@ -26,7 +26,7 @@ public class useCardIII : MonoBehaviour
         yield return null;
         Debug.Log("card set false");
         cardUsed = false;
-        manager.CycleCards();
+        manager.CycleCardsIII();
         yield return null;
     }
 }

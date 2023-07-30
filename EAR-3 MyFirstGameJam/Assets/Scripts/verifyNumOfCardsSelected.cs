@@ -22,6 +22,11 @@ public class verifyNumOfCardsSelected : MonoBehaviour
 
     public void Verify()
     {
+        //nu vreau sa creez un nou script pentru asta
+        manager.cardsI[cardManager.cardsIindex].gameObject.SetActive(true);
+        manager.cardsII[cardManager.cardsIIindex].gameObject.SetActive(true);
+        manager.cardsIII[cardManager.cardsIIIindex].gameObject.SetActive(true);
+
         if(selectCardI.currentNumOfCardsInDeck_1 == 3 &&
            selectCardII.currentNumOfCardsInDeck_2 == 3 &&
            selectCardIII.currentNumOfCardsInDeck_3 == 3)

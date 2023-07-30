@@ -11,13 +11,18 @@ public class cardManager : MonoBehaviour
     public Image[] cardsIII;
     public GameObject cardSelector;
 
+    public static int cardsIindex = 0;
+    public static int cardsIIindex = 0;
+    public static int cardsIIIindex = 0;
+
      void Start()
      {
-         Debug.Log("carti alese");
-         cardSelector.SetActive(true);
-         cardsI[Random.Range(0, cardsI.Length)].gameObject.SetActive(true);
-         cardsII[Random.Range(0, cardsII.Length)].gameObject.SetActive(true);
-         cardsIII[Random.Range(0, cardsIII.Length)].gameObject.SetActive(true);
+        Debug.Log("carti alese");
+        cardSelector.SetActive(true);
+        
+        //  cardsI[Random.Range(0, cardsI.Length)].gameObject.SetActive(true);
+        //  cardsII[Random.Range(0, cardsII.Length)].gameObject.SetActive(true);
+        //  cardsIII[Random.Range(0, cardsIII.Length)].gameObject.SetActive(true);
      }
 
     public void CycleCards()
@@ -42,8 +47,57 @@ public class cardManager : MonoBehaviour
         cardsIII[Random.Range(0, cardsIII.Length)].gameObject.SetActive(true);
     }
 
+    public void CycleCardsI()
+    {
+        cardsI[cardsIindex].gameObject.SetActive(false);
+        if(cardsIindex != 2)
+        {
+            cardsIindex++;
+            cardsI[cardsIindex].gameObject.SetActive(true);
+            
+        }
+        else
+        {
+            cardsI[0].gameObject.SetActive(true);
+            cardsIindex = 0;
+        }
+    }
+
+    public void CycleCardsII()
+    {
+        cardsII[cardsIIindex].gameObject.SetActive(false);
+        if(cardsIIindex != 2)
+        {
+            cardsIIindex++;
+            cardsII[cardsIIindex].gameObject.SetActive(true);
+            
+        }
+        else
+        {
+            cardsII[0].gameObject.SetActive(true);
+            cardsIIindex = 0;
+        }
+    }
+
+    public void CycleCardsIII()
+    {
+        cardsIII[cardsIIIindex].gameObject.SetActive(false);
+        if(cardsIIIindex != 2)
+        {
+            cardsIIIindex++;
+            cardsIII[cardsIIIindex].gameObject.SetActive(true);
+            
+        }
+        else
+        {
+            cardsIII[0].gameObject.SetActive(true);
+            cardsIIIindex = 0;
+        }
+    }
+
     void Update()
     {
+        
         if(cardsI[0] == null)
         {
             cardsI[0] = cardsI[1];

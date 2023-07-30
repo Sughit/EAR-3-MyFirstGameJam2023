@@ -27,6 +27,10 @@ public class moartScript : MonoBehaviour
 
         IEnumerator Meniu()
     {
+        cardManager.cardsIindex = 0;
+        cardManager.cardsIIindex = 0;
+        cardManager.cardsIIIindex = 0;
+
         carti.SetActive(false);
         yield return new WaitForSeconds(1);
         meniuMoarte.SetActive(true);

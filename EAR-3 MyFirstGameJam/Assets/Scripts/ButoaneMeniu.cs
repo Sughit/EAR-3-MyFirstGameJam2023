@@ -16,7 +16,7 @@ public class ButoaneMeniu : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         usa.floor=0;
-
+        ViataPlayer.kills=0;
     }
 
     public void MainMenu()

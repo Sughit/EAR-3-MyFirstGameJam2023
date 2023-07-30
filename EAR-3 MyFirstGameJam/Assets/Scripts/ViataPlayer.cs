@@ -11,6 +11,8 @@ public class ViataPlayer : MonoBehaviour
     private Movement miscare;
     public GameObject moarte;
     public Text textViata;
+    public Text textKill;
+    public static float kills=0;
 
     void Start()
     {
@@ -27,6 +29,8 @@ public class ViataPlayer : MonoBehaviour
             Die();
         }
         textViata.text = health.ToString();
+        textKill = GameObject.Find("/GENERARE/SPAWNED/parinte player(Clone)/ptMeniuri/meniuMoarte/Panel/kills").GetComponent<Text>(); 
+        textKill.text = kills.ToString();
     }
     public void Die()
     {

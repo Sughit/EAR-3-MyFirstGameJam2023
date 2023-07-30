@@ -17,6 +17,7 @@ public class meniuPrincipal : MonoBehaviour
     public void PlayGame()
     {
         SceneManager.LoadScene("1");
+        ViataPlayer.kills=0;
         usa.floor=0;
     }
 

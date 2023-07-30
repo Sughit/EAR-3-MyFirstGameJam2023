@@ -29,6 +29,7 @@ public class ViataEnemy : MonoBehaviour
 
         if(health<=0)
         {
+            ViataPlayer.kills++;
             Destroy(gameObject);
         }
     }

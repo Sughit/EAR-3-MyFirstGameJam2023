@@ -66,7 +66,7 @@ public class EnemyScript : MonoBehaviour
 
         RaycastHit2D hit = Physics2D.Raycast(transform.position, differance.normalized, followPlayerRange, obstaclesLayerMask);
         Debug.DrawRay(transform.position, differance * followPlayerRange, Color.magenta);
-        Debug.Log(hit.collider);
+        // Debug.Log(hit.collider);
  
         if (Vector2.Distance(transform.position, player.transform.position) <= followPlayerRange)
         {

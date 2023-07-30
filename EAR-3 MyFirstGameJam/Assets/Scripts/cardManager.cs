@@ -97,32 +97,6 @@ public class cardManager : MonoBehaviour
 
     void Update()
     {
-        
-        foreach (var cardI in cardsI)
-        {
-            if(cardI.gameObject.activeSelf == true && cardI != cardsI[cardsIindex])
-            {
-                cardI.gameObject.SetActive(false);
-                cardsI[cardsIindex].gameObject.SetActive(true);
-            }
-        }
-        foreach (var cardII in cardsII)
-        {
-            if(cardII.gameObject.activeSelf == true && cardII != cardsII[cardsIIindex])
-            {
-                cardII.gameObject.SetActive(false);
-                cardsII[cardsIIindex].gameObject.SetActive(true);
-            }
-        }
-        foreach (var cardIII in cardsIII)
-        {
-            if(cardIII.gameObject.activeSelf == true && cardIII != cardsIII[cardsIIIindex])
-            {
-                cardIII.gameObject.SetActive(false);
-                cardsIII[cardsIIIindex].gameObject.SetActive(true);
-            }
-        }
-        
         if(cardsI[0] == null)
         {
             cardsI[0] = cardsI[1];
@@ -155,22 +129,30 @@ public class cardManager : MonoBehaviour
             cardsIII[1] = cardsIII[2];
             cardsIII[2] = null;
         }
+        
+        foreach (var cardI in cardsI)
+        {
+            if(cardI.gameObject.activeSelf == true && cardI != cardsI[cardsIindex])
+            {
+                cardI.gameObject.SetActive(false);
+                cardsI[cardsIindex].gameObject.SetActive(true);
+            }
+        }
+        foreach (var cardII in cardsII)
+        {
+            if(cardII.gameObject.activeSelf == true && cardII != cardsII[cardsIIindex])
+            {
+                cardII.gameObject.SetActive(false);
+                cardsII[cardsIIindex].gameObject.SetActive(true);
+            }
+        }
+        foreach (var cardIII in cardsIII)
+        {
+            if(cardIII.gameObject.activeSelf == true && cardIII != cardsIII[cardsIIIindex])
+            {
+                cardIII.gameObject.SetActive(false);
+                cardsIII[cardsIIIindex].gameObject.SetActive(true);
+            }
+        }
     }
-
-    /*public void PentruRestart()
-    {
-         for(int i=0;i<3;i++)
-         {
-            cardsI[i]=null;
-         }
-         for(int i=0;i<3;i++)
-         {
-            cardsII[i]=null;
-         }
-         for(int i=0;i<3;i++)
-         {
-            cardsIII[i]=null;
-         }
-
-    }*/
 }

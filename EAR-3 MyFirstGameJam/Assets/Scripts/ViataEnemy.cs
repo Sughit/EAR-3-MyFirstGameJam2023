@@ -9,6 +9,8 @@ public class ViataEnemy : MonoBehaviour
     public float health=100f; 
     public static float maxHealth=100f;
 
+    public GameObject particuleFoc;
+
     void Awake()
     {
         healthBar = GetComponentInChildren<healthBarScript>();
@@ -38,10 +40,12 @@ public class ViataEnemy : MonoBehaviour
 
     IEnumerator TakeFireDamage()
     {
+        particuleFoc.SetActive(true);
         for(int i = 0; i < 5; i++)
         {
             TakeDamage(5f);
             yield return new WaitForSeconds(3);
         }
+        particuleFoc.SetActive(false);
     }
 }

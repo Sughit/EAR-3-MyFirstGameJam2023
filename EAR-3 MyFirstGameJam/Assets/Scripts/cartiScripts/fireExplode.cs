@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class fireExplode : MonoBehaviour
 {
-    ViataEnemy enemyScript;
+    ViataEnemy enemyHealth;
     public float timeToExplode;
     public float range;
+    public GameObject particule;
 
     // Start is called before the first frame update
     void Start()
@@ -18,14 +19,16 @@ public class fireExplode : MonoBehaviour
     {
         yield return new WaitForSeconds(timeToExplode);
         Debug.Log("fire exploded");
+        particule.SetActive(true);
         foreach(Collider2D collider in Physics2D.OverlapCircleAll(transform.position, range))
         {
-                if(enemyScript = collider.GetComponent<ViataEnemy>())
+                if(enemyHealth = collider.GetComponent<ViataEnemy>())
                 {
-                    enemyScript.OnFire();
+                    enemyHealth.OnFire();
                     Destroy(this.gameObject);
                 }
         }
+        yield return new WaitForSeconds(0.5f);
         Destroy(this.gameObject);
 
         yield return null;

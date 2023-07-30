@@ -8,6 +8,7 @@ public class meniuPrincipal : MonoBehaviour
 
     public GameObject panelPrincipal;
     public GameObject panelSetari;
+    usa usa;
     public void ExitGame() 
     { 
         Application.Quit(); 
@@ -16,6 +17,7 @@ public class meniuPrincipal : MonoBehaviour
     public void PlayGame()
     {
         SceneManager.LoadScene("1");
+        usa.floor=0;
     }
 
     public void Setari()

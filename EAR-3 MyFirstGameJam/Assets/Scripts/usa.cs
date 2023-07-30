@@ -8,6 +8,8 @@ public class usa : MonoBehaviour
     public Text doorText;
     public bool isInRange;
     RoomFirstDungeonGenerator toNextFloor;
+    public static float floor=0;
+    public Text textFloor;
 
     // Start is called before the first frame update
     void Start()
@@ -51,7 +53,11 @@ public class usa : MonoBehaviour
                 glontInamic.damage += 2f;
                 glontInamic.resistenceDamage += 2f;
                 toNextFloor.GenerateDungeon();
+                floor++;
+                
             }
         }
+        textFloor = GameObject.Find("/GENERARE/SPAWNED/parinte player(Clone)/ptMeniuri/meniuMoarte/Panel/floor").GetComponent<Text>();        
+        textFloor.text=floor.ToString();
     }
 }

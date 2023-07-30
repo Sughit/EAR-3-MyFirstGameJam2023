@@ -31,6 +31,10 @@ public class moartScript : MonoBehaviour
         cardManager.cardsIIindex = 0;
         cardManager.cardsIIIindex = 0;
 
+        ViataEnemy.maxHealth = 100f;
+        glontInamic.damage = 10f;
+        glontInamic.resistenceDamage = 10f;
+
         carti.SetActive(false);
         yield return new WaitForSeconds(1);
         meniuMoarte.SetActive(true);

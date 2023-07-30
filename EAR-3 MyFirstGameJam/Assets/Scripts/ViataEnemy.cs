@@ -44,7 +44,7 @@ public class ViataEnemy : MonoBehaviour
         for(int i = 0; i < 5; i++)
         {
             TakeDamage(5f);
-            yield return new WaitForSeconds(3);
+            yield return new WaitForSeconds(1);
         }
         particuleFoc.SetActive(false);
     }

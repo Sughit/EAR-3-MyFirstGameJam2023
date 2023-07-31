@@ -9,7 +9,7 @@ public class bulletScript : MonoBehaviour
      ViataEnemy enemyScript;
      public Transform varf;
     public int damage;
-    public int damageBoost;
+    public static int damageBoost = 40;
 
     private damageBoost boost;
 

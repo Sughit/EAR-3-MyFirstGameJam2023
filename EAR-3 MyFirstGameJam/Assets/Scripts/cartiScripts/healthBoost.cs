@@ -7,6 +7,7 @@ public class healthBoost : MonoBehaviour
 {
     public useCardI healthCard;
     private ViataPlayer player;
+    public float healAmount;
 
     void Update()
     {
@@ -27,7 +28,7 @@ public class healthBoost : MonoBehaviour
 
         if(player.health <= 80)
         {
-            player.NuMaiDaCaMaDoare(-20f);
+            player.NuMaiDaCaMaDoare(-healAmount);
         }
         else
         {

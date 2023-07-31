@@ -582,7 +582,7 @@ GameObject:
   - component: {fileID: 232795726}
   - component: {fileID: 232795727}
   m_Layer: 5
-  m_Name: card10
+  m_Name: immunityCard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5173,7 +5173,7 @@ GameObject:
   - component: {fileID: 1896159240}
   - component: {fileID: 1896159241}
   m_Layer: 5
-  m_Name: card11
+  m_Name: 2xStatsCard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5398,6 +5398,8 @@ GameObject:
   - component: {fileID: 2110837667}
   - component: {fileID: 2110837668}
   - component: {fileID: 2110837669}
+  - component: {fileID: 2110837670}
+  - component: {fileID: 2110837671}
   m_Layer: 0
   m_Name: cardEffectsManager
   m_TagString: Untagged
@@ -5449,6 +5451,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthCard: {fileID: 354559183}
+  healAmount: 20
 --- !u!4 &2110837663
 Transform:
   m_ObjectHideFlags: 0
@@ -5559,6 +5562,36 @@ MonoBehaviour:
   weapon: {fileID: 0}
   ammoPanel: {fileID: 0}
   boostAmmoPanel: {fileID: 1190632950}
+--- !u!114 &2110837670
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2110837659}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba8ae0ffe0e963a448cbb03c32a96d27, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  immunity: {fileID: 232795727}
+  boostDuration: 5
+--- !u!114 &2110837671
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2110837659}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa0328016f6b136419e9fbb9fef54f6d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  doubleStats: {fileID: 1896159241}
+  boostDuration: 5
+  speed: {fileID: 2110837661}
+  health: {fileID: 2110837662}
 --- !u!1 &2117579003
 GameObject:
   m_ObjectHideFlags: 0

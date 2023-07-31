@@ -8,6 +8,7 @@ public class meniuPrincipal : MonoBehaviour
 
     public GameObject panelPrincipal;
     public GameObject panelSetari;
+    public GameObject panelTutorial;
     usa usa;
     public void ExitGame() 
     { 
@@ -27,9 +28,21 @@ public class meniuPrincipal : MonoBehaviour
         panelSetari.SetActive(true);
     }
 
+    public void Tutorial()
+    {
+        panelPrincipal.SetActive(false);
+        panelTutorial.SetActive(true);
+    }
+
     public void BackSetari()
     {
         panelSetari.SetActive(false);
+        panelPrincipal.SetActive(true);
+    }
+
+    public void BackTutorial()
+    {
+        panelTutorial.SetActive(false);
         panelPrincipal.SetActive(true);
     }
 }

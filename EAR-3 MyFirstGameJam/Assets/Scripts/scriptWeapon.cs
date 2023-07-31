@@ -8,7 +8,7 @@ public class scriptWeapon : MonoBehaviour
     public GameObject glontPrefab;
     public Transform punctTragere;
     public float forta=20f;
-    public float fireRate;
+    public float fireRate=7f;
     private bool canFire=true;
     public float ammo=30;
     public Text textAmmo;

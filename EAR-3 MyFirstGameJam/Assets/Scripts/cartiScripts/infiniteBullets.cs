@@ -25,6 +25,7 @@ public class infiniteBullets : MonoBehaviour
 
     IEnumerator InfiniteAmmo()
     {
+        weapon.fireRate=12f;
         Debug.Log("ammo effect is on");
         float currentAmmo = weapon.ammo;
         ammoPanel.gameObject.SetActive(false);
@@ -32,6 +33,7 @@ public class infiniteBullets : MonoBehaviour
         weapon.ammo = 10000f;
         yield return new WaitForSeconds(boostDuration);
         weapon.ammo = currentAmmo;
+        weapon.fireRate=7f;
         ammoPanel.gameObject.SetActive(true);
         boostAmmoPanel.gameObject.SetActive(false);
     }

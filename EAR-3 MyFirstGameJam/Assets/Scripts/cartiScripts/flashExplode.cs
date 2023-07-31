@@ -9,6 +9,7 @@ public class flashExplode : MonoBehaviour
     public float timeToExplode;
     public static float flashedTime = 3f;
     public float range;
+    public GameObject particule;
 
     // Start is called before the first frame update
     void Start()
@@ -20,6 +21,7 @@ public class flashExplode : MonoBehaviour
     {
         yield return new WaitForSeconds(timeToExplode);
         Debug.Log("flash exploded");
+        particule.SetActive(true);
         foreach(Collider2D collider in Physics2D.OverlapCircleAll(transform.position, range))
         {
             enemyWander = collider.GetComponent<wanderingAI>();
@@ -29,7 +31,10 @@ public class flashExplode : MonoBehaviour
                     enemyScript.enabled = false;
                     StartCoroutine(Flashed());
                 }
+                
         }
+        yield return new WaitForSeconds(0.5f);
+        particule.SetActive(false);
         yield return null;
     }
 

@@ -24,7 +24,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 131842030}
-  m_LocalRotation: {x: 0.0027214163, y: 0.022857197, z: -0.00006222044, w: 0.99973506}
+  m_LocalRotation: {x: 0.0027216305, y: 0.022857197, z: -0.00006222533, w: 0.99973506}
   m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 3.9223025, y: 3.9795268, z: 1.0062786}
   m_ConstrainProportionsScale: 0
@@ -762,8 +762,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -50, y: 146}
-  m_SizeDelta: {x: 650.045, y: 176.9807}
+  m_AnchoredPosition: {x: -92, y: 146}
+  m_SizeDelta: {x: 675.2739, y: 176.9807}
   m_Pivot: {x: 0.49999994, y: 0.5}
 --- !u!222 &1366854508
 CanvasRenderer:
@@ -806,7 +806,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: YOu Reached floor
+  m_Text: YOu`ve Reached floor
 --- !u!1 &1379625105
 GameObject:
   m_ObjectHideFlags: 0
@@ -1622,7 +1622,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 641, y: 146}
+  m_AnchoredPosition: {x: 659, y: 146}
   m_SizeDelta: {x: 152.555, y: 176.9807}
   m_Pivot: {x: 0.49999994, y: 0.5}
 --- !u!222 &2092397613
@@ -1666,7 +1666,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: n/a
+  m_Text: 
 --- !u!1 &2092995838
 GameObject:
   m_ObjectHideFlags: 0
@@ -2713,7 +2713,6 @@ MonoBehaviour:
   moarte: {fileID: 3538486391517013258, guid: 37d36e2dfe7456c47a1ac0e6e48ff310, type: 3}
   textViata: {fileID: 9217437687681773457}
   textKill: {fileID: 0}
-  kills: 0
 --- !u!1 &3998080731580957030
 GameObject:
   m_ObjectHideFlags: 0

@@ -142,6 +142,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   manager: {fileID: 0}
   cardToAdd: {fileID: 0}
+  buttonCard: {fileID: 0}
   maxCardsInACategory: 3
 --- !u!1 &3614533905031104628
 GameObject:
@@ -194,6 +195,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   manager: {fileID: 0}
   cardToAdd: {fileID: 0}
+  buttonCard: {fileID: 0}
   maxCardsInACategory: 3
 --- !u!1 &3614533905105103924
 GameObject:
@@ -206,7 +208,7 @@ GameObject:
   - component: {fileID: 3614533905105103925}
   - component: {fileID: 3614533905105103922}
   m_Layer: 5
-  m_Name: card2
+  m_Name: immunityCard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -246,6 +248,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   manager: {fileID: 0}
   cardToAdd: {fileID: 0}
+  buttonCard: {fileID: 0}
   maxCardsInACategory: 0
 --- !u!1 &3614533905166895285
 GameObject:
@@ -298,6 +301,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   manager: {fileID: 0}
   cardToAdd: {fileID: 0}
+  buttonCard: {fileID: 0}
   maxCardsInACategory: 0
 --- !u!1 &3614533905169834490
 GameObject:
@@ -350,6 +354,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   manager: {fileID: 0}
   cardToAdd: {fileID: 0}
+  buttonCard: {fileID: 0}
   maxCardsInACategory: 3
 --- !u!1 &3614533905204385114
 GameObject:
@@ -403,7 +408,7 @@ GameObject:
   - component: {fileID: 3614533905257512024}
   - component: {fileID: 3614533905257512025}
   m_Layer: 5
-  m_Name: card3
+  m_Name: 2xStatsCard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -443,6 +448,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   manager: {fileID: 0}
   cardToAdd: {fileID: 0}
+  buttonCard: {fileID: 0}
   maxCardsInACategory: 0
 --- !u!1 &3614533905264817529
 GameObject:
@@ -495,6 +501,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   manager: {fileID: 0}
   cardToAdd: {fileID: 0}
+  buttonCard: {fileID: 0}
   maxCardsInACategory: 3
 --- !u!1 &3614533905311228966
 GameObject:
@@ -547,6 +554,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   manager: {fileID: 0}
   cardToAdd: {fileID: 0}
+  buttonCard: {fileID: 0}
   maxCardsInACategory: 3
 --- !u!1 &3614533905319306170
 GameObject:
@@ -599,6 +607,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   manager: {fileID: 0}
   cardToAdd: {fileID: 0}
+  buttonCard: {fileID: 0}
   maxCardsInACategory: 3
 --- !u!1 &3614533905505686943
 GameObject:
@@ -691,6 +700,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   manager: {fileID: 0}
   cardToAdd: {fileID: 0}
+  buttonCard: {fileID: 0}
   maxCardsInACategory: 0
 --- !u!1 &3614533905650703456
 GameObject:
@@ -783,7 +793,7 @@ GameObject:
   - component: {fileID: 3614533906251788471}
   - component: {fileID: 3614533906251788468}
   m_Layer: 5
-  m_Name: card1
+  m_Name: infiniteAmmoCard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -823,6 +833,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   manager: {fileID: 0}
   cardToAdd: {fileID: 0}
+  buttonCard: {fileID: 0}
   maxCardsInACategory: 0
 --- !u!1 &3614533906621778505
 GameObject:
@@ -835,7 +846,7 @@ GameObject:
   - component: {fileID: 3614533906621778518}
   - component: {fileID: 3614533906621778519}
   m_Layer: 5
-  m_Name: card4
+  m_Name: 2xProjectilesCard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -875,4 +886,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   manager: {fileID: 0}
   cardToAdd: {fileID: 0}
+  buttonCard: {fileID: 0}
   maxCardsInACategory: 0

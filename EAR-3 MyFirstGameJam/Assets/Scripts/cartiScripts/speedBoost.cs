@@ -8,9 +8,11 @@ public class speedBoost : MonoBehaviour
     private Movement player;
     public float maxSpeedBoost;
     public float boostDuration;
+    public GameObject particule;
 
     void Update()
     {
+        particule = GameObject.Find("GENERARE/SPAWNED/parinte player(Clone)/player/particule/speed");
         if(speedCard.cardUsed)
         {
             StartCoroutine(SpeedBoost());
@@ -32,12 +34,14 @@ public class speedBoost : MonoBehaviour
 
     IEnumerator SpeedEffect()
     {
+        particule.SetActive(true);
         if(player.speed != maxSpeedBoost)
         {
             player.speed += 200f;
             yield return new WaitForSeconds(boostDuration);
             Debug.Log("speed effect is gone");
             player.speed -= 200f;
+            particule.SetActive(false);
         }
         else yield return null;
     }

@@ -8,6 +8,7 @@ public class smokeExplode : MonoBehaviour
     public GameObject smoke;
     public GameObject doubleSmoke;
     public float smokedTime;
+    public AudioSource sunetExplozie;
 
     // Start is called before the first frame update
     void Start()
@@ -18,6 +19,7 @@ public class smokeExplode : MonoBehaviour
     IEnumerator ExplodeSmoke()
     {
         yield return new WaitForSeconds(timeToExplode);
+        sunetExplozie.Play(0);
         Debug.Log("smoke exploded");
         if(doubleProjectilesCard.doubleSmoke)
         {

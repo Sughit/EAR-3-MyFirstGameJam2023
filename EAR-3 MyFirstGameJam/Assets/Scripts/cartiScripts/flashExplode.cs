@@ -10,6 +10,7 @@ public class flashExplode : MonoBehaviour
     public static float flashedTime = 3f;
     public float range;
     public GameObject particule;
+    public AudioSource sunetExplozie;
 
     // Start is called before the first frame update
     void Start()
@@ -20,6 +21,7 @@ public class flashExplode : MonoBehaviour
     IEnumerator ExplodeFlash()
     {
         yield return new WaitForSeconds(timeToExplode);
+        sunetExplozie.Play(0);
         Debug.Log("flash exploded");
         particule.SetActive(true);
         foreach(Collider2D collider in Physics2D.OverlapCircleAll(transform.position, range))

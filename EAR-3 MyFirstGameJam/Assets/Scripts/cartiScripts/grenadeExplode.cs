@@ -9,6 +9,7 @@ public class grenadeExplode : MonoBehaviour
     public float range;
     public GameObject particule;
     public static float damage = 40f;
+    public AudioSource sunetExplozie;
 
     // Start is called before the first frame update
     void Start()
@@ -19,6 +20,7 @@ public class grenadeExplode : MonoBehaviour
     IEnumerator ExplodeGrenade()
     {
         yield return new WaitForSeconds(timeToExplode);
+        sunetExplozie.Play(0);
         Debug.Log("grenade exploded");
         particule.SetActive(true);
         foreach(Collider2D collider in Physics2D.OverlapCircleAll(transform.position, range))
@@ -26,10 +28,10 @@ public class grenadeExplode : MonoBehaviour
                 if(enemyScript = collider.GetComponent<ViataEnemy>())
                 {
                     enemyScript.TakeDamage(damage);
-                    Destroy(this.gameObject);
                 }
         }
-        yield return new WaitForSeconds(0.5f);
+        
+        yield return new WaitForSeconds(1f);
         Destroy(this.gameObject);
 
         yield return null;

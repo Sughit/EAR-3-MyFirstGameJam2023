@@ -8,9 +8,11 @@ public class healthBoost : MonoBehaviour
     public useCardI healthCard;
     private ViataPlayer player;
     public float healAmount;
+    public GameObject particule;
 
     void Update()
     {
+        particule = GameObject.Find("GENERARE/SPAWNED/parinte player(Clone)/player/particule/heal");
         if(healthCard.cardUsed)
         {
             StartCoroutine(HealthBoost());
@@ -29,12 +31,15 @@ public class healthBoost : MonoBehaviour
         if(player.health <= 80)
         {
             player.NuMaiDaCaMaDoare(-healAmount);
+            particule.SetActive(true);
         }
         else
         {
             player.health=100;
             player.UpdateHealthBarPlayer(player.health, player.maxHealth);
         }
+        yield return new WaitForSeconds(1f);
+        particule.SetActive(false);
         yield return null;
     }
 }

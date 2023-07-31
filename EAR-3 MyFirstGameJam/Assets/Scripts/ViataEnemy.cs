@@ -8,6 +8,7 @@ public class ViataEnemy : MonoBehaviour
 
     public float health=100f; 
     public static float maxHealth=100f;
+    public static float fireDamage = 8f;
 
     public GameObject particuleFoc;
 
@@ -44,7 +45,7 @@ public class ViataEnemy : MonoBehaviour
         particuleFoc.SetActive(true);
         for(int i = 0; i < 5; i++)
         {
-            TakeDamage(8f);
+            TakeDamage(fireDamage);
             yield return new WaitForSeconds(1);
         }
         particuleFoc.SetActive(false);

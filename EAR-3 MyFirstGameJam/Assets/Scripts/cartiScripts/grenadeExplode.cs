@@ -8,6 +8,7 @@ public class grenadeExplode : MonoBehaviour
     public float timeToExplode;
     public float range;
     public GameObject particule;
+    public static float damage = 40f;
 
     // Start is called before the first frame update
     void Start()
@@ -24,7 +25,7 @@ public class grenadeExplode : MonoBehaviour
         {
                 if(enemyScript = collider.GetComponent<ViataEnemy>())
                 {
-                    enemyScript.TakeDamage(40);
+                    enemyScript.TakeDamage(damage);
                     Destroy(this.gameObject);
                 }
         }

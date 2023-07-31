@@ -6,6 +6,7 @@ public class smokeExplode : MonoBehaviour
 {
     public float timeToExplode;
     public GameObject smoke;
+    public GameObject doubleSmoke;
     public float smokedTime;
 
     // Start is called before the first frame update
@@ -18,7 +19,14 @@ public class smokeExplode : MonoBehaviour
     {
         yield return new WaitForSeconds(timeToExplode);
         Debug.Log("smoke exploded");
-        Instantiate(smoke, transform.position, transform.rotation);
+        if(doubleProjectilesCard.doubleSmoke)
+        {
+            Instantiate(doubleSmoke, transform.position, transform.rotation);
+        }
+        else
+        {
+            Instantiate(smoke, transform.position, transform.rotation);
+        }
         StartCoroutine(Smoked());
 
         yield return null;

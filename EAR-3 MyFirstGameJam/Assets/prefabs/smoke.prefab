@@ -148,4 +148,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeToExplode: 2
   smoke: {fileID: 518791086638691324, guid: bebaebf16198b594e90b94c627fc6170, type: 3}
-  smokedTime: 7
+  doubleSmoke: {fileID: 2309309119217876583, guid: d5c0186ed575d3b45934ee02de9ce13f, type: 3}
+  smokedTime: 3

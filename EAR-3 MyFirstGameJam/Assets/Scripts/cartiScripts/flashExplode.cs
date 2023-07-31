@@ -7,7 +7,7 @@ public class flashExplode : MonoBehaviour
     EnemyScript enemyScript;
     wanderingAI enemyWander;
     public float timeToExplode;
-    public float flashedTime;
+    public static float flashedTime = 3f;
     public float range;
 
     // Start is called before the first frame update

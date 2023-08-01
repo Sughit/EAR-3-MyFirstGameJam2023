@@ -7568,3 +7568,5 @@ MonoBehaviour:
   playerPrefab: {fileID: 5227897718922631231, guid: 00c067e325bcab64380271a5ba2e9523, type: 3}
   playerSpawnArea: 5.5
   nextDoor: {fileID: 5566098477284484319, guid: 37111c37e95742547b9f271b324c5506, type: 3}
+  nextDoorLeft: {fileID: 6038335433805136331, guid: 275f710810c6a2f4c91d0a0e5088bdb6, type: 3}
+  nextDoorRight: {fileID: 7056293536693989207, guid: 5b4b11242b1dcdc4f8fc5e3db38acfda, type: 3}

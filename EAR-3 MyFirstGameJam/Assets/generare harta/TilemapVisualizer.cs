@@ -26,8 +26,8 @@ public class TilemapVisualizer : MonoBehaviour
     //pentru usa care duce la nivelul urmator 
 
     public GameObject nextDoor;
-    // public GameObject nextDoorLeft;
-    // public GameObject nextDoorRight;
+    public GameObject nextDoorLeft;
+    public GameObject nextDoorRight;
     private bool isDoor = true;
 
     public void PaintFloorTiles(IEnumerable<Vector2Int> floorPositions)
@@ -72,18 +72,18 @@ public class TilemapVisualizer : MonoBehaviour
         if(WallTypesHelper.wallSideRight.Contains(typeAsInt))
         {
             tile = wallSideRight;
-            if(Random.Range(0,3) == 2 && isDoor && Vector3.Distance(new Vector3(position.x + 0.5f, position.y + 0.5f, 0), playerPos) >= 4 * playerSpawnArea)
+            if(Random.Range(0,3) == 2 && isDoor && Vector3.Distance(new Vector3(position.x + 0.05f, position.y + 0.5f, 0), playerPos) >= 4 * playerSpawnArea)
             {
-                Instantiate(nextDoor, new Vector3(position.x + 0.5f, position.y + 0.5f, 0), Quaternion.identity, SpawnManager);
+                Instantiate(nextDoorRight, new Vector3(position.x + 0.05f, position.y + 0.5f, 0), Quaternion.identity, SpawnManager);
                 isDoor = false;
             }
         }
         else if (WallTypesHelper.wallSideLeft.Contains(typeAsInt))
         {
             tile = wallSideLeft;
-            if (Random.Range(0, 3) == 2 && isDoor && Vector3.Distance(new Vector3(position.x + 0.5f, position.y + 0.5f, 0), playerPos) >= 4 * playerSpawnArea)
+            if (Random.Range(0, 3) == 2 && isDoor && Vector3.Distance(new Vector3(position.x + 0.95f, position.y + 0.5f, 0), playerPos) >= 4 * playerSpawnArea)
             {
-                Instantiate(nextDoor, new Vector3(position.x + 0.5f, position.y + 0.5f, 0), Quaternion.identity, SpawnManager);
+                Instantiate(nextDoorLeft, new Vector3(position.x + 0.95f, position.y + 0.5f, 0), Quaternion.identity, SpawnManager);
                 isDoor = false;
             }
         }

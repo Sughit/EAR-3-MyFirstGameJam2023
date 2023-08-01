@@ -6,9 +6,11 @@ public class immunityCard : MonoBehaviour
 {
     public useCardIII immunity;
     public float boostDuration;
+    public GameObject particule;
 
     void Update()
     {
+        particule = GameObject.Find("GENERARE/SPAWNED/parinte player(Clone)/player/particule/immunity");
         if(immunity.cardUsed)
         {
             StartCoroutine(ImmunityEffect());
@@ -17,6 +19,7 @@ public class immunityCard : MonoBehaviour
 
     IEnumerator ImmunityEffect()
     {
+        particule.SetActive(true);
         float currentDamage = glontInamic.damage;
         float currentResistenceDamage = glontInamic.resistenceDamage;
         glontInamic.damage = 0;
@@ -24,5 +27,6 @@ public class immunityCard : MonoBehaviour
         yield return new WaitForSeconds(boostDuration);
         glontInamic.damage = currentDamage;
         glontInamic.resistenceDamage = currentResistenceDamage;
+        particule.SetActive(false);
     }
 }

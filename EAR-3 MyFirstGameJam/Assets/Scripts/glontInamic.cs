@@ -11,6 +11,7 @@ public class glontInamic : MonoBehaviour
     ViataPlayer ViataPlayer;
     public static float damage = 10f;
     public static float resistenceDamage = 7f;
+    public GameObject particule;
 
     private resistenceBoost boost;
  
@@ -42,6 +43,7 @@ public class glontInamic : MonoBehaviour
         {
                 if(ViataPlayer = collider.GetComponent<ViataPlayer>())
                 {
+                    Instantiate(particule, collider.transform.position, Quaternion.identity);
                     ViataPlayer.NuMaiDaCaMaDoare(damage);
                     Destroy(gameObject);
                 }
@@ -54,6 +56,7 @@ public class glontInamic : MonoBehaviour
         {
                 if(ViataPlayer = collider.GetComponent<ViataPlayer>())
                 {
+                    Instantiate(particule, collider.transform.position, Quaternion.identity);
                     ViataPlayer.NuMaiDaCaMaDoare(resistenceDamage);
                     Destroy(gameObject);
                 }

@@ -10,6 +10,7 @@ public class bulletScript : MonoBehaviour
      public Transform varf;
     public int damage;
     public static int damageBoost = 40;
+    public GameObject particule;
 
     private damageBoost boost;
 
@@ -44,6 +45,7 @@ public class bulletScript : MonoBehaviour
         {
                 if(enemyScript = collider.GetComponent<ViataEnemy>())
                 {
+                    Instantiate(particule, collider.transform.position, Quaternion.identity);
                     enemyScript.TakeDamage(damage);
                     Destroy(gameObject);
                     
@@ -57,6 +59,7 @@ public class bulletScript : MonoBehaviour
         {
                 if(enemyScript = collider.GetComponent<ViataEnemy>())
                 {
+                    Instantiate(particule, collider.transform.position, Quaternion.identity);
                     enemyScript.TakeDamage(damageBoost);
                     Destroy(gameObject);
                     

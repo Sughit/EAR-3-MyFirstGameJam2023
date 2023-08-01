@@ -35,6 +35,7 @@ public class healthBoost : MonoBehaviour
         }
         else
         {
+            particule.SetActive(true);
             player.health=100;
             player.UpdateHealthBarPlayer(player.health, player.maxHealth);
         }

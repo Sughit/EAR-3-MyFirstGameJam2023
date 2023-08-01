@@ -124,7 +124,7 @@ MonoBehaviour:
   circleRange: 0.12
   varf: {fileID: 2412684992052315076}
   damage: 20
-  damageBoost: 40
+  particule: {fileID: 1114620734026972659, guid: 9cdbd1094dc5de249880a55fe6e53c68, type: 3}
 --- !u!58 &7436576239297669676
 CircleCollider2D:
   m_ObjectHideFlags: 0

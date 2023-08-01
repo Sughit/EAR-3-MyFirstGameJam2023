@@ -5438,7 +5438,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speedCard: {fileID: 1811387722}
   maxSpeedBoost: 600
-  boostDuration: 5
+  boostDuration: 7
   particule: {fileID: 0}
 --- !u!114 &2110837662
 MonoBehaviour:
@@ -5484,7 +5484,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damageCard: {fileID: 377243193}
   isBoost: 0
-  boostDuration: 5
+  boostDuration: 7
   particule: {fileID: 0}
 --- !u!114 &2110837665
 MonoBehaviour:
@@ -5500,7 +5500,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   resistenceCard: {fileID: 1877128662}
   isBoost: 0
-  boostDuration: 5
+  boostDuration: 7
   particule: {fileID: 0}
 --- !u!114 &2110837666
 MonoBehaviour:
@@ -5563,7 +5563,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   card: {fileID: 344360882}
-  boostDuration: 5
+  boostDuration: 7
   weapon: {fileID: 0}
   ammoPanel: {fileID: 0}
   boostAmmoPanel: {fileID: 1190632950}

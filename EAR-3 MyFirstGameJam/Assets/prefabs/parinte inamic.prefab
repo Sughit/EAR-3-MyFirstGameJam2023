@@ -5729,6 +5729,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 3
   rotSpeed: 180
+  obstaclesLayerMask:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!1 &7581995733245156695
 GameObject:
   m_ObjectHideFlags: 0

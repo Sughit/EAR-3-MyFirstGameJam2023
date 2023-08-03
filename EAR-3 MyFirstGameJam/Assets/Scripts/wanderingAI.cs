@@ -28,9 +28,8 @@ public class wanderingAI : MonoBehaviour
 
     Rigidbody2D rb;
 
-
-
-    // Update is called once per frame
+    // [SerializeField]
+    // private LayerMask obstaclesLayerMask;
 
     void Start()
     {
@@ -38,11 +37,18 @@ public class wanderingAI : MonoBehaviour
          rb = this.GetComponent<Rigidbody2D>();
     }
 
-    void Update()
+    void FixedUpdate()
 
     {
         if(enemyScript.inRange==false)
  {
+        // RaycastHit2D hitWalls = Physics2D.Raycast(transform.position, Vector3.forward, 1, obstaclesLayerMask);
+        // Debug.DrawRay(transform.position, Vector3.forward, Color.magenta);
+        // if(hitWalls.collider != null)
+        // {
+        //     isRotatingRight = true;
+        // }
+        
         if (isWandering == false)
 
         {
